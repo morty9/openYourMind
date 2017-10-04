@@ -19,6 +19,11 @@
 		08DC4E761F854FD3000E0D57 /* FirstScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E741F854FD3000E0D57 /* FirstScreenViewController.xib */; };
 		08DC4E7A1F8552B6000E0D57 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E781F8552B6000E0D57 /* LoginScreenViewController.m */; };
 		08DC4E7B1F8552B6000E0D57 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E791F8552B6000E0D57 /* LoginScreenViewController.xib */; };
+		08DC4E841F857684000E0D57 /* Schools.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E831F857684000E0D57 /* Schools.m */; };
+		08DC4E871F8581EE000E0D57 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E861F8581EE000E0D57 /* Notes.m */; };
+		08DC4E8A1F85832F000E0D57 /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E891F85832F000E0D57 /* Users.m */; };
+		08DC4E8D1F858610000E0D57 /* Assos.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E8C1F858610000E0D57 /* Assos.m */; };
+		08DC4E911F85888D000E0D57 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E901F85888D000E0D57 /* Type.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,16 @@
 		08DC4E771F8552B6000E0D57 /* LoginScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
 		08DC4E781F8552B6000E0D57 /* LoginScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginScreenViewController.m; sourceTree = "<group>"; };
 		08DC4E791F8552B6000E0D57 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
+		08DC4E821F857684000E0D57 /* Schools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schools.h; sourceTree = "<group>"; };
+		08DC4E831F857684000E0D57 /* Schools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schools.m; sourceTree = "<group>"; };
+		08DC4E851F8581EE000E0D57 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
+		08DC4E861F8581EE000E0D57 /* Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notes.m; sourceTree = "<group>"; };
+		08DC4E881F85832F000E0D57 /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
+		08DC4E891F85832F000E0D57 /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
+		08DC4E8B1F858610000E0D57 /* Assos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assos.h; sourceTree = "<group>"; };
+		08DC4E8C1F858610000E0D57 /* Assos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assos.m; sourceTree = "<group>"; };
+		08DC4E8F1F85888D000E0D57 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
+		08DC4E901F85888D000E0D57 /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +248,7 @@
 		08DC4E7C1F85751E000E0D57 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4E8E1F85868B000E0D57 /* Type */,
 				08DC4E801F857589000E0D57 /* Schools */,
 				08DC4E7F1F857583000E0D57 /* Notes */,
 				08DC4E7E1F857569000E0D57 /* Users */,
@@ -244,6 +260,8 @@
 		08DC4E7D1F85755D000E0D57 /* Assos */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4E8B1F858610000E0D57 /* Assos.h */,
+				08DC4E8C1F858610000E0D57 /* Assos.m */,
 			);
 			path = Assos;
 			sourceTree = "<group>";
@@ -251,6 +269,8 @@
 		08DC4E7E1F857569000E0D57 /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4E881F85832F000E0D57 /* Users.h */,
+				08DC4E891F85832F000E0D57 /* Users.m */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -258,6 +278,8 @@
 		08DC4E7F1F857583000E0D57 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4E851F8581EE000E0D57 /* Notes.h */,
+				08DC4E861F8581EE000E0D57 /* Notes.m */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -265,9 +287,20 @@
 		08DC4E801F857589000E0D57 /* Schools */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4E821F857684000E0D57 /* Schools.h */,
+				08DC4E831F857684000E0D57 /* Schools.m */,
 			);
 			name = Schools;
 			path = School;
+			sourceTree = "<group>";
+		};
+		08DC4E8E1F85868B000E0D57 /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4E8F1F85888D000E0D57 /* Type.h */,
+				08DC4E901F85888D000E0D57 /* Type.m */,
+			);
+			path = Type;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,10 +441,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DC4E8D1F858610000E0D57 /* Assos.m in Sources */,
 				08DC4E341F8522C8000E0D57 /* AppDelegate.m in Sources */,
 				08DC4E751F854FD3000E0D57 /* FirstScreenViewController.m in Sources */,
 				08DC4E311F8522C8000E0D57 /* main.m in Sources */,
+				08DC4E841F857684000E0D57 /* Schools.m in Sources */,
+				08DC4E911F85888D000E0D57 /* Type.m in Sources */,
+				08DC4E8A1F85832F000E0D57 /* Users.m in Sources */,
 				08DC4E6F1F854A98000E0D57 /* SignUpViewController.m in Sources */,
+				08DC4E871F8581EE000E0D57 /* Notes.m in Sources */,
 				08DC4E7A1F8552B6000E0D57 /* LoginScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
