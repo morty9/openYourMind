@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginScreenViewController">
             <connections>
+                <outlet property="email" destination="jMR-K5-tEC" id="Qch-HC-ga4"/>
+                <outlet property="password" destination="SHF-wG-bfr" id="kSK-cy-Hln"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

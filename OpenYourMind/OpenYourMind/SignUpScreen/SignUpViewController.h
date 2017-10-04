@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignUpViewController : UIViewController
+@interface SignUpViewController : UIViewController {
+    
+    __weak IBOutlet UITextField *name;
+    __weak IBOutlet UITextField *firstname;
+    __weak IBOutlet UITextField *email;
+    __weak IBOutlet UITextField *password;
+    
+    __weak IBOutlet UIPickerView *school;
+    
+}
 
 @end

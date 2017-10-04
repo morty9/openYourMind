@@ -111,6 +111,7 @@
 		08DC4E2E1F8522C8000E0D57 /* OpenYourMind */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4E7C1F85751E000E0D57 /* Data */,
 				08DC4E711F854FAE000E0D57 /* FirstScreen */,
 				08DC4E6A1F85239E000E0D57 /* AssoScreen */,
 				08DC4E691F85238F000E0D57 /* LabScreen */,
@@ -227,6 +228,46 @@
 				08DC4E741F854FD3000E0D57 /* FirstScreenViewController.xib */,
 			);
 			path = FirstScreen;
+			sourceTree = "<group>";
+		};
+		08DC4E7C1F85751E000E0D57 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4E801F857589000E0D57 /* Schools */,
+				08DC4E7F1F857583000E0D57 /* Notes */,
+				08DC4E7E1F857569000E0D57 /* Users */,
+				08DC4E7D1F85755D000E0D57 /* Assos */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		08DC4E7D1F85755D000E0D57 /* Assos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assos;
+			sourceTree = "<group>";
+		};
+		08DC4E7E1F857569000E0D57 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		08DC4E7F1F857583000E0D57 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		08DC4E801F857589000E0D57 /* Schools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Schools;
+			path = School;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController">
             <connections>
+                <outlet property="email" destination="z2x-oR-YTl" id="puc-0w-9XW"/>
+                <outlet property="firstname" destination="2Z5-CK-RK8" id="nTN-Yf-2Vd"/>
+                <outlet property="name" destination="dfa-nX-zS7" id="kUk-jE-e6E"/>
+                <outlet property="password" destination="dMz-xV-JKr" id="dRW-Vk-hvc"/>
+                <outlet property="school" destination="CKY-54-nfj" id="s7D-yh-lqF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

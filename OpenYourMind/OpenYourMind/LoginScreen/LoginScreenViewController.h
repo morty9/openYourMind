@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginScreenViewController : UIViewController
+@interface LoginScreenViewController : UIViewController {
+    
+    __weak IBOutlet UITextField *email;
+    __weak IBOutlet UITextField *password;
+    
+}
 
 @end
