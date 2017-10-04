@@ -17,11 +17,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self designPage];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) designPage {
+    
+    //navigation bar customization
+    self.navigationItem.title = [NSString stringWithFormat:@"Connexion"];
+    
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.14 green:0.22 blue:0.27 alpha:1.0];
+    
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor colorWithRed:0.14 green:0.22 blue:0.27 alpha:1.0] forKey:NSForegroundColorAttributeName];
+    
+    //border email text field
+    CALayer *borderEmail = [CALayer layer];
+    CGFloat borderWidthEmail = 1.5;
+    borderEmail.borderColor = [UIColor darkGrayColor].CGColor;
+    borderEmail.frame = CGRectMake(0, email.frame.size.height - borderWidthEmail, email.frame.size.width, email.frame.size.height);
+    borderEmail.borderWidth = borderWidthEmail;
+    [email.layer addSublayer:borderEmail];
+    email.layer.masksToBounds = YES;
+    
+    //border password text field
+    CALayer *borderPwd = [CALayer layer];
+    CGFloat borderWidthPwd = 1.5;
+    borderPwd.borderColor = [UIColor darkGrayColor].CGColor;
+    borderPwd.frame = CGRectMake(0, password.frame.size.height - borderWidthPwd, password.frame.size.width, password.frame.size.height);
+    borderPwd.borderWidth = borderWidthPwd;
+    [password.layer addSublayer:borderPwd];
+    password.layer.masksToBounds = YES;
+    
 }
 
 /*
