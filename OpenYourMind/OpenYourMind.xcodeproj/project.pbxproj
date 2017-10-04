@@ -13,6 +13,12 @@
 		08DC4E3F1F8522C8000E0D57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E3D1F8522C8000E0D57 /* LaunchScreen.storyboard */; };
 		08DC4E4A1F8522C8000E0D57 /* OpenYourMindTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E491F8522C8000E0D57 /* OpenYourMindTests.m */; };
 		08DC4E551F8522C8000E0D57 /* OpenYourMindUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E541F8522C8000E0D57 /* OpenYourMindUITests.m */; };
+		08DC4E6F1F854A98000E0D57 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E6D1F854A98000E0D57 /* SignUpViewController.m */; };
+		08DC4E701F854A98000E0D57 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E6E1F854A98000E0D57 /* SignUpViewController.xib */; };
+		08DC4E751F854FD3000E0D57 /* FirstScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E731F854FD3000E0D57 /* FirstScreenViewController.m */; };
+		08DC4E761F854FD3000E0D57 /* FirstScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E741F854FD3000E0D57 /* FirstScreenViewController.xib */; };
+		08DC4E7A1F8552B6000E0D57 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E781F8552B6000E0D57 /* LoginScreenViewController.m */; };
+		08DC4E7B1F8552B6000E0D57 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E791F8552B6000E0D57 /* LoginScreenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,15 @@
 		08DC4E501F8522C8000E0D57 /* OpenYourMindUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenYourMindUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DC4E541F8522C8000E0D57 /* OpenYourMindUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenYourMindUITests.m; sourceTree = "<group>"; };
 		08DC4E561F8522C8000E0D57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08DC4E6C1F854A98000E0D57 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		08DC4E6D1F854A98000E0D57 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		08DC4E6E1F854A98000E0D57 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		08DC4E721F854FD3000E0D57 /* FirstScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstScreenViewController.h; sourceTree = "<group>"; };
+		08DC4E731F854FD3000E0D57 /* FirstScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstScreenViewController.m; sourceTree = "<group>"; };
+		08DC4E741F854FD3000E0D57 /* FirstScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstScreenViewController.xib; sourceTree = "<group>"; };
+		08DC4E771F8552B6000E0D57 /* LoginScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
+		08DC4E781F8552B6000E0D57 /* LoginScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginScreenViewController.m; sourceTree = "<group>"; };
+		08DC4E791F8552B6000E0D57 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +111,7 @@
 		08DC4E2E1F8522C8000E0D57 /* OpenYourMind */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4E711F854FAE000E0D57 /* FirstScreen */,
 				08DC4E6A1F85239E000E0D57 /* AssoScreen */,
 				08DC4E691F85238F000E0D57 /* LabScreen */,
 				08DC4E671F852357000E0D57 /* ProfilScreen */,
@@ -150,6 +166,9 @@
 		08DC4E631F852310000E0D57 /* SignUpScreen */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4E6C1F854A98000E0D57 /* SignUpViewController.h */,
+				08DC4E6D1F854A98000E0D57 /* SignUpViewController.m */,
+				08DC4E6E1F854A98000E0D57 /* SignUpViewController.xib */,
 			);
 			path = SignUpScreen;
 			sourceTree = "<group>";
@@ -157,6 +176,9 @@
 		08DC4E641F852324000E0D57 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4E771F8552B6000E0D57 /* LoginScreenViewController.h */,
+				08DC4E781F8552B6000E0D57 /* LoginScreenViewController.m */,
+				08DC4E791F8552B6000E0D57 /* LoginScreenViewController.xib */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -195,6 +217,16 @@
 			children = (
 			);
 			path = AssoScreen;
+			sourceTree = "<group>";
+		};
+		08DC4E711F854FAE000E0D57 /* FirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4E721F854FD3000E0D57 /* FirstScreenViewController.h */,
+				08DC4E731F854FD3000E0D57 /* FirstScreenViewController.m */,
+				08DC4E741F854FD3000E0D57 /* FirstScreenViewController.xib */,
+			);
+			path = FirstScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +339,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				08DC4E3F1F8522C8000E0D57 /* LaunchScreen.storyboard in Resources */,
+				08DC4E761F854FD3000E0D57 /* FirstScreenViewController.xib in Resources */,
+				08DC4E701F854A98000E0D57 /* SignUpViewController.xib in Resources */,
 				08DC4E3C1F8522C8000E0D57 /* Assets.xcassets in Resources */,
+				08DC4E7B1F8552B6000E0D57 /* LoginScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +368,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				08DC4E341F8522C8000E0D57 /* AppDelegate.m in Sources */,
+				08DC4E751F854FD3000E0D57 /* FirstScreenViewController.m in Sources */,
 				08DC4E311F8522C8000E0D57 /* main.m in Sources */,
+				08DC4E6F1F854A98000E0D57 /* SignUpViewController.m in Sources */,
+				08DC4E7A1F8552B6000E0D57 /* LoginScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +510,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9GDJ425SV6;
 				INFOPLIST_FILE = OpenYourMind/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -484,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9GDJ425SV6;
 				INFOPLIST_FILE = OpenYourMind/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
