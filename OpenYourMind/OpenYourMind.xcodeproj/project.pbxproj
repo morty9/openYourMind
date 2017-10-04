@@ -30,6 +30,8 @@
 		08DC4E9C1F859230000E0D57 /* AssoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E9A1F859230000E0D57 /* AssoCollectionViewCell.xib */; };
 		08DC4EA01F859A50000E0D57 /* ProfilScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E9E1F859A50000E0D57 /* ProfilScreenViewController.m */; };
 		08DC4EA11F859A50000E0D57 /* ProfilScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E9F1F859A50000E0D57 /* ProfilScreenViewController.xib */; };
+		08DC4EA51F85A031000E0D57 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EA31F85A031000E0D57 /* HomeScreenViewController.m */; };
+		08DC4EA61F85A031000E0D57 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4EA41F85A031000E0D57 /* HomeScreenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,9 @@
 		08DC4E9D1F859A50000E0D57 /* ProfilScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilScreenViewController.h; sourceTree = "<group>"; };
 		08DC4E9E1F859A50000E0D57 /* ProfilScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilScreenViewController.m; sourceTree = "<group>"; };
 		08DC4E9F1F859A50000E0D57 /* ProfilScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilScreenViewController.xib; sourceTree = "<group>"; };
+		08DC4EA21F85A031000E0D57 /* HomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
+		08DC4EA31F85A031000E0D57 /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
+		08DC4EA41F85A031000E0D57 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +234,9 @@
 		08DC4E661F85234B000E0D57 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4EA21F85A031000E0D57 /* HomeScreenViewController.h */,
+				08DC4EA31F85A031000E0D57 /* HomeScreenViewController.m */,
+				08DC4EA41F85A031000E0D57 /* HomeScreenViewController.xib */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -444,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DC4EA61F85A031000E0D57 /* HomeScreenViewController.xib in Resources */,
 				08DC4E961F858ACB000E0D57 /* AssosiationViewController.xib in Resources */,
 				08DC4E3F1F8522C8000E0D57 /* LaunchScreen.storyboard in Resources */,
 				08DC4EA11F859A50000E0D57 /* ProfilScreenViewController.xib in Resources */,
@@ -489,6 +498,7 @@
 				08DC4E951F858ACB000E0D57 /* AssosiationViewController.m in Sources */,
 				08DC4EA01F859A50000E0D57 /* ProfilScreenViewController.m in Sources */,
 				08DC4E7A1F8552B6000E0D57 /* LoginScreenViewController.m in Sources */,
+				08DC4EA51F85A031000E0D57 /* HomeScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

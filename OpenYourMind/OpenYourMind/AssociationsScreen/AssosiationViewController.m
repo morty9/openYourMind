@@ -29,6 +29,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self designPage];
+    
     self.navigationItem.title = [NSString stringWithFormat:@"Associations"];
     self.navigationItem.hidesBackButton = YES;
     
@@ -74,6 +76,20 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
 }
+
+- (void) addFavourite {
+    
+}
+
+
+- (void) designPage {
+    self.navigationItem.hidesBackButton = YES;
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(addFavourite)];
+    addButton.tintColor = [UIColor colorWithRed:0.14 green:0.22 blue:0.27 alpha:1.0];
+    [self.navigationItem setRightBarButtonItem:addButton];
+}
+
 
 /*
 #pragma mark - Navigation
