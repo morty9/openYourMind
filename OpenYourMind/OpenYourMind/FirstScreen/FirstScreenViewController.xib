@@ -27,11 +27,11 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpn-QN-Uko">
-                    <rect key="frame" x="35.666666666666657" y="577" width="343" height="43"/>
+                    <rect key="frame" x="20" y="577" width="374" height="43"/>
                     <color key="backgroundColor" red="0.1019607843" green="0.6705882353" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="FA4-7D-oBj"/>
-                        <constraint firstAttribute="width" constant="343" id="fTI-aB-Lsu"/>
+                        <constraint firstAttribute="width" constant="374" id="fTI-aB-Lsu"/>
                     </constraints>
                     <state key="normal" title="S'inscrire via une adresse e-mail">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,11 +41,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toS-YB-WgZ">
-                    <rect key="frame" x="35.666666666666657" y="631" width="343" height="43"/>
+                    <rect key="frame" x="20" y="638" width="374" height="43"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="HYI-gw-yfE"/>
-                        <constraint firstAttribute="width" constant="343" id="lBd-dC-PxB"/>
+                        <constraint firstAttribute="width" constant="374" id="lBd-dC-PxB"/>
                     </constraints>
                     <state key="normal" title="Se connecter">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,13 +70,13 @@
                 <constraint firstItem="fq7-4n-a7I" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6nO-aa-dtV"/>
                 <constraint firstItem="FEi-hp-aLH" firstAttribute="top" secondItem="fq7-4n-a7I" secondAttribute="bottom" constant="81" id="82r-25-fkN"/>
                 <constraint firstItem="toS-YB-WgZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BDY-U9-G2G"/>
-                <constraint firstAttribute="bottom" secondItem="toS-YB-WgZ" secondAttribute="bottom" constant="62" id="fJA-Js-had"/>
-                <constraint firstItem="toS-YB-WgZ" firstAttribute="top" secondItem="jpn-QN-Uko" secondAttribute="bottom" constant="11" id="fj9-mp-9YR"/>
+                <constraint firstAttribute="bottom" secondItem="toS-YB-WgZ" secondAttribute="bottom" constant="55" id="fJA-Js-had"/>
+                <constraint firstItem="toS-YB-WgZ" firstAttribute="top" secondItem="jpn-QN-Uko" secondAttribute="bottom" constant="18" id="fj9-mp-9YR"/>
                 <constraint firstItem="jpn-QN-Uko" firstAttribute="centerX" secondItem="toS-YB-WgZ" secondAttribute="centerX" id="hDd-HW-6i8"/>
                 <constraint firstItem="fq7-4n-a7I" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="67" id="hsi-3k-mpc"/>
                 <constraint firstItem="FEi-hp-aLH" firstAttribute="centerX" secondItem="fq7-4n-a7I" secondAttribute="centerX" id="wjT-IY-SRW"/>
             </constraints>
-            <point key="canvasLocation" x="33.5" y="54.5"/>
+            <point key="canvasLocation" x="33" y="54"/>
         </view>
     </objects>
     <resources>

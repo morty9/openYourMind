@@ -18,7 +18,60 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-7l-hqC">
+                    <rect key="frame" x="96" y="77" width="222" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="222" id="26x-bH-7dG"/>
+                        <constraint firstAttribute="height" constant="250" id="nXu-cw-aLg"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMR-K5-tEC">
+                    <rect key="frame" x="20" y="396" width="374" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="374" id="6hq-Fz-hMF"/>
+                        <constraint firstAttribute="height" constant="58" id="dj2-yZ-R2n"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SHF-wG-bfr">
+                    <rect key="frame" x="20" y="477" width="374" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="374" id="SDH-sQ-rSc"/>
+                        <constraint firstAttribute="height" constant="58" id="nJ0-tR-LTH"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HM4-Ud-mUo">
+                    <rect key="frame" x="20" y="636" width="374" height="43"/>
+                    <color key="backgroundColor" red="0.1019607843" green="0.6705882353" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="vQx-hi-Eco"/>
+                        <constraint firstAttribute="width" constant="374" id="wdT-17-H6m"/>
+                    </constraints>
+                    <state key="normal" title="Valider">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jMR-K5-tEC" firstAttribute="centerX" secondItem="CbG-7l-hqC" secondAttribute="centerX" id="25L-aW-OGT"/>
+                <constraint firstItem="CbG-7l-hqC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="77" id="C7f-Tp-4iL"/>
+                <constraint firstItem="SHF-wG-bfr" firstAttribute="centerX" secondItem="jMR-K5-tEC" secondAttribute="centerX" id="IvJ-KD-oC4"/>
+                <constraint firstItem="CbG-7l-hqC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ore-p5-h8O"/>
+                <constraint firstItem="SHF-wG-bfr" firstAttribute="top" secondItem="jMR-K5-tEC" secondAttribute="bottom" constant="23" id="S2P-Jq-rBS"/>
+                <constraint firstItem="HM4-Ud-mUo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f9e-UA-TwZ"/>
+                <constraint firstAttribute="bottom" secondItem="HM4-Ud-mUo" secondAttribute="bottom" constant="57" id="oC9-Gl-Lfc"/>
+                <constraint firstItem="jMR-K5-tEC" firstAttribute="top" secondItem="CbG-7l-hqC" secondAttribute="bottom" constant="69" id="yJE-CM-lKH"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="LOGO" width="282" height="319"/>
+    </resources>
 </document>
