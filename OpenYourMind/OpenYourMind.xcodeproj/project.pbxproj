@@ -28,6 +28,8 @@
 		08DC4E961F858ACB000E0D57 /* AssosiationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E941F858ACB000E0D57 /* AssosiationViewController.xib */; };
 		08DC4E9B1F859230000E0D57 /* AssoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E991F859230000E0D57 /* AssoCollectionViewCell.m */; };
 		08DC4E9C1F859230000E0D57 /* AssoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E9A1F859230000E0D57 /* AssoCollectionViewCell.xib */; };
+		08DC4EA01F859A50000E0D57 /* ProfilScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E9E1F859A50000E0D57 /* ProfilScreenViewController.m */; };
+		08DC4EA11F859A50000E0D57 /* ProfilScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E9F1F859A50000E0D57 /* ProfilScreenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,9 @@
 		08DC4E981F859230000E0D57 /* AssoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssoCollectionViewCell.h; sourceTree = "<group>"; };
 		08DC4E991F859230000E0D57 /* AssoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssoCollectionViewCell.m; sourceTree = "<group>"; };
 		08DC4E9A1F859230000E0D57 /* AssoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssoCollectionViewCell.xib; sourceTree = "<group>"; };
+		08DC4E9D1F859A50000E0D57 /* ProfilScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilScreenViewController.h; sourceTree = "<group>"; };
+		08DC4E9E1F859A50000E0D57 /* ProfilScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilScreenViewController.m; sourceTree = "<group>"; };
+		08DC4E9F1F859A50000E0D57 /* ProfilScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilScreenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +236,9 @@
 		08DC4E671F852357000E0D57 /* ProfilScreen */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4E9D1F859A50000E0D57 /* ProfilScreenViewController.h */,
+				08DC4E9E1F859A50000E0D57 /* ProfilScreenViewController.m */,
+				08DC4E9F1F859A50000E0D57 /* ProfilScreenViewController.xib */,
 			);
 			path = ProfilScreen;
 			sourceTree = "<group>";
@@ -438,6 +446,7 @@
 			files = (
 				08DC4E961F858ACB000E0D57 /* AssosiationViewController.xib in Resources */,
 				08DC4E3F1F8522C8000E0D57 /* LaunchScreen.storyboard in Resources */,
+				08DC4EA11F859A50000E0D57 /* ProfilScreenViewController.xib in Resources */,
 				08DC4E761F854FD3000E0D57 /* FirstScreenViewController.xib in Resources */,
 				08DC4E701F854A98000E0D57 /* SignUpViewController.xib in Resources */,
 				08DC4E3C1F8522C8000E0D57 /* Assets.xcassets in Resources */,
@@ -478,6 +487,7 @@
 				08DC4E6F1F854A98000E0D57 /* SignUpViewController.m in Sources */,
 				08DC4E871F8581EE000E0D57 /* Notes.m in Sources */,
 				08DC4E951F858ACB000E0D57 /* AssosiationViewController.m in Sources */,
+				08DC4EA01F859A50000E0D57 /* ProfilScreenViewController.m in Sources */,
 				08DC4E7A1F8552B6000E0D57 /* LoginScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

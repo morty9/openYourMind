@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FirstScreenViewController.h"
 #import "AssosiationViewController.h"
+#import "ProfilScreenViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    AssosiationViewController* tvb = [[AssosiationViewController alloc] init];
+    ProfilScreenViewController* tvb = [[ProfilScreenViewController alloc] init];
     UIWindow* w = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     w.rootViewController = [[UINavigationController alloc] initWithRootViewController:tvb];
     [w makeKeyAndVisible];
