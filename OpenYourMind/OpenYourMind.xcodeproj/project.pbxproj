@@ -98,7 +98,6 @@
 			children = (
 				08DC4E6A1F85239E000E0D57 /* AssoScreen */,
 				08DC4E691F85238F000E0D57 /* LabScreen */,
-				08DC4E681F852364000E0D57 /* RecapAssoScreen */,
 				08DC4E671F852357000E0D57 /* ProfilScreen */,
 				08DC4E661F85234B000E0D57 /* HomeScreen */,
 				08DC4E651F85232B000E0D57 /* AssosiationsScreen */,
@@ -182,13 +181,6 @@
 			children = (
 			);
 			path = ProfilScreen;
-			sourceTree = "<group>";
-		};
-		08DC4E681F852364000E0D57 /* RecapAssoScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RecapAssoScreen;
 			sourceTree = "<group>";
 		};
 		08DC4E691F85238F000E0D57 /* LabScreen */ = {
