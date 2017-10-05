@@ -23,6 +23,7 @@
     if (self != nil) {
         self.userList = [[NSMutableArray<Users*> alloc] init];
         self.user = [[Users alloc] init];
+        synchronousMethod = [[SynchronousMethod alloc] init];
     }
     return self;
 }

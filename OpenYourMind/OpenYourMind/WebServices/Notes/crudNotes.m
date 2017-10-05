@@ -23,6 +23,7 @@
     if (self != nil) {
         self.noteList = [[NSMutableArray<Notes*> alloc] init];
         self.note = [[Notes alloc] init];
+        synchronousMethod = [[SynchronousMethod alloc] init];
     }
     return self;
 }

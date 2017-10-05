@@ -23,6 +23,7 @@
     if (self != nil) {
         self.eventList = [[NSMutableArray<Event*> alloc] init];
         self.event = [[Event alloc] init];
+        synchronousMethod = [[SynchronousMethod alloc] init];
     }
     return self;
 }

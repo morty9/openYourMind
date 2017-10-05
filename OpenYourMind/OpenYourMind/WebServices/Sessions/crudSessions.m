@@ -23,6 +23,7 @@
     if (self != nil) {
         self.sessionList = [[NSMutableArray<Session*> alloc] init];
         self.session = [[Session alloc] init];
+        synchronousMethod = [[SynchronousMethod alloc] init];
     }
     return self;
 }

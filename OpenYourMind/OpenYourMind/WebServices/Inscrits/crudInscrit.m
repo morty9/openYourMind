@@ -23,6 +23,7 @@
     if (self != nil) {
         self.inscritList = [[NSMutableArray<Inscrits*> alloc] init];
         self.inscrit = [[Inscrits alloc] init];
+        synchronousMethod = [[SynchronousMethod alloc] init];
     }
     return self;
 }

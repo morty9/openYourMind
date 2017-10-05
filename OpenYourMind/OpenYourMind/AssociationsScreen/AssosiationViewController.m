@@ -8,18 +8,29 @@
 
 #import "AssosiationViewController.h"
 #import "AssoCollectionViewCell.h"
+#import "crudAssos.h"
+#import "Assos.h"
 
 @interface AssosiationViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UISearchDisplayDelegate, UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
 
 @end
 
-@implementation AssosiationViewController
+@implementation AssosiationViewController {
+    
+    Assos* assos;
+    crudAssos* cAssos;
+    
+    NSArray<Assos*>* getAssos;
+    
+}
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self != nil) {
-        
+        assos = [[Assos alloc] init];
+        cAssos = [[crudAssos alloc] init];
+        getAssos = [[NSArray alloc] init];
     }
     
     return self;
@@ -30,6 +41,13 @@
     // Do any additional setup after loading the view from its nib.
     
     [self designPage];
+    
+    [cAssos getAssos:^(NSError *error, BOOL success) {
+        if (success) {
+            getAssos = cAssos.assoList;
+            NSLog(@"ASSOS %@", getAssos);
+        }
+    }];
     
     self.assoCollectionView.delegate = self;
     self.assoCollectionView.dataSource = self;

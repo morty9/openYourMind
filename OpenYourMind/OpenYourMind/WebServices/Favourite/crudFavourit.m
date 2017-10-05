@@ -23,6 +23,7 @@
     if (self != nil) {
         self.favouriteList = [[NSMutableArray<Favourite*> alloc] init];
         self.favourite = [[Favourite alloc] init];
+        synchronousMethod = [[SynchronousMethod alloc] init];
     }
     return self;
 }
