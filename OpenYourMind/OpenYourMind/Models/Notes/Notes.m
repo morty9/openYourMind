@@ -15,7 +15,7 @@
 @synthesize id_inscrit = id_inscrit_;
 @synthesize id_session = id_session_;
 
-- (instancetype) initWithId:(NSInteger)id_note description:(NSString*)description id_inscrit:(NSInteger)id_inscrit id_session:(NSInteger)id_session {
+- (instancetype) initWithId:(NSInteger*)id_note description:(NSInteger*)description id_inscrit:(NSInteger*)id_inscrit id_session:(NSInteger*)id_session {
     
     self = [super init];
     

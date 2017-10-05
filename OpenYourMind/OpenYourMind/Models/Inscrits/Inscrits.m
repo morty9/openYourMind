@@ -15,7 +15,7 @@
 @synthesize id_session = id_session_;
 @synthesize status = status_;
 
-- (instancetype) initWithId:(NSInteger)id_inscrit id_user:(NSInteger)id_user id_session:(NSInteger)id_session status:(BOOL)status {
+- (instancetype) initWithId:(NSInteger*)id_inscrit id_user:(NSInteger*)id_user id_session:(NSInteger*)id_session status:(BOOL)status {
     
     self = [super init];
     

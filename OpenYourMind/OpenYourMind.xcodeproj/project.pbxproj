@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0886D6211F86610F004F2A95 /* Types.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6201F86610F004F2A95 /* Types.m */; };
+		0886D6261F86656E004F2A95 /* crudEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6251F86656E004F2A95 /* crudEvents.m */; };
+		0886D6291F86657A004F2A95 /* crudSessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6281F86657A004F2A95 /* crudSessions.m */; };
 		08DC4E311F8522C8000E0D57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E301F8522C8000E0D57 /* main.m */; };
 		08DC4E341F8522C8000E0D57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E331F8522C8000E0D57 /* AppDelegate.m */; };
 		08DC4E3C1F8522C8000E0D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E3B1F8522C8000E0D57 /* Assets.xcassets */; };
@@ -23,7 +26,6 @@
 		08DC4E871F8581EE000E0D57 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E861F8581EE000E0D57 /* Notes.m */; };
 		08DC4E8A1F85832F000E0D57 /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E891F85832F000E0D57 /* Users.m */; };
 		08DC4E8D1F858610000E0D57 /* Assos.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E8C1F858610000E0D57 /* Assos.m */; };
-		08DC4E911F85888D000E0D57 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E901F85888D000E0D57 /* Type.m */; };
 		08DC4E951F858ACB000E0D57 /* AssosiationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E931F858ACB000E0D57 /* AssosiationViewController.m */; };
 		08DC4E961F858ACB000E0D57 /* AssosiationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E941F858ACB000E0D57 /* AssosiationViewController.xib */; };
 		08DC4E9B1F859230000E0D57 /* AssoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E991F859230000E0D57 /* AssoCollectionViewCell.m */; };
@@ -60,6 +62,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0886D61F1F86610F004F2A95 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		0886D6201F86610F004F2A95 /* Types.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Types.m; sourceTree = "<group>"; };
+		0886D6241F86656E004F2A95 /* crudEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudEvents.h; sourceTree = "<group>"; };
+		0886D6251F86656E004F2A95 /* crudEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudEvents.m; sourceTree = "<group>"; };
+		0886D6271F86657A004F2A95 /* crudSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudSessions.h; sourceTree = "<group>"; };
+		0886D6281F86657A004F2A95 /* crudSessions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudSessions.m; sourceTree = "<group>"; };
 		08DC4E2C1F8522C8000E0D57 /* OpenYourMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenYourMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DC4E301F8522C8000E0D57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08DC4E321F8522C8000E0D57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,8 +98,6 @@
 		08DC4E891F85832F000E0D57 /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
 		08DC4E8B1F858610000E0D57 /* Assos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assos.h; sourceTree = "<group>"; };
 		08DC4E8C1F858610000E0D57 /* Assos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assos.m; sourceTree = "<group>"; };
-		08DC4E8F1F85888D000E0D57 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
-		08DC4E901F85888D000E0D57 /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
 		08DC4E921F858ACB000E0D57 /* AssosiationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssosiationViewController.h; sourceTree = "<group>"; };
 		08DC4E931F858ACB000E0D57 /* AssosiationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssosiationViewController.m; sourceTree = "<group>"; };
 		08DC4E941F858ACB000E0D57 /* AssosiationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssosiationViewController.xib; sourceTree = "<group>"; };
@@ -148,6 +154,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0886D6221F866521004F2A95 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				0886D6271F86657A004F2A95 /* crudSessions.h */,
+				0886D6281F86657A004F2A95 /* crudSessions.m */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
+		0886D6231F86652A004F2A95 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				0886D6241F86656E004F2A95 /* crudEvents.h */,
+				0886D6251F86656E004F2A95 /* crudEvents.m */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		08DC4E231F8522C8000E0D57 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +245,8 @@
 		08DC4E621F8522DD000E0D57 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				0886D6231F86652A004F2A95 /* Events */,
+				0886D6221F866521004F2A95 /* Sessions */,
 				08DC4EAB1F85A43E000E0D57 /* Type */,
 				08DC4EAA1F85A42B000E0D57 /* Schools */,
 				08DC4EA91F85A426000E0D57 /* Notes */,
@@ -365,8 +391,8 @@
 		08DC4E8E1F85868B000E0D57 /* Type */ = {
 			isa = PBXGroup;
 			children = (
-				08DC4E8F1F85888D000E0D57 /* Type.h */,
-				08DC4E901F85888D000E0D57 /* Type.m */,
+				0886D61F1F86610F004F2A95 /* Types.h */,
+				0886D6201F86610F004F2A95 /* Types.m */,
 			);
 			path = Type;
 			sourceTree = "<group>";
@@ -617,17 +643,19 @@
 			files = (
 				08DC4E9B1F859230000E0D57 /* AssoCollectionViewCell.m in Sources */,
 				08DC4E8D1F858610000E0D57 /* Assos.m in Sources */,
+				0886D6261F86656E004F2A95 /* crudEvents.m in Sources */,
 				08DC4EC21F863518000E0D57 /* Favourite.m in Sources */,
 				08DC4E341F8522C8000E0D57 /* AppDelegate.m in Sources */,
 				08DC4E751F854FD3000E0D57 /* FirstScreenViewController.m in Sources */,
 				08DC4E311F8522C8000E0D57 /* main.m in Sources */,
 				08DC4EBF1F86349E000E0D57 /* Role.m in Sources */,
+				0886D6211F86610F004F2A95 /* Types.m in Sources */,
 				08DC4E841F857684000E0D57 /* Schools.m in Sources */,
-				08DC4E911F85888D000E0D57 /* Type.m in Sources */,
 				08DC4E8A1F85832F000E0D57 /* Users.m in Sources */,
 				08DC4E6F1F854A98000E0D57 /* SignUpViewController.m in Sources */,
 				08DC4E871F8581EE000E0D57 /* Notes.m in Sources */,
 				08DC4EC51F863607000E0D57 /* Event.m in Sources */,
+				0886D6291F86657A004F2A95 /* crudSessions.m in Sources */,
 				08DC4EBC1F86339E000E0D57 /* Inscrits.m in Sources */,
 				08DC4EB41F8629D0000E0D57 /* SynchronousMethod.m in Sources */,
 				08DC4E951F858ACB000E0D57 /* AssosiationViewController.m in Sources */,

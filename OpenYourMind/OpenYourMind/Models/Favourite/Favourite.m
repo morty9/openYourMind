@@ -14,7 +14,7 @@
 @synthesize id_user = id_user_;
 @synthesize id_asso = id_asso_;
 
-- (instancetype) initWithId:(NSInteger)id_favourite id_user:(NSInteger)id_user id_asso:(NSInteger)id_asso {
+- (instancetype) initWithId:(NSInteger*)id_favourite id_user:(NSInteger*)id_user id_asso:(NSInteger*)id_asso {
     
     self = [super init];
     

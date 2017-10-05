@@ -10,14 +10,14 @@
 
 @interface Schools : NSObject {
     
-    NSInteger id_school_;
+    NSInteger* id_school_;
     NSString* name_;
     
 }
 
-@property (nonatomic, assign) NSInteger id_school;
+@property (nonatomic, assign) NSInteger* id_school;
 @property (nonatomic, strong) NSString* name;
 
-- (instancetype) initWithId:(NSInteger)id_school name:(NSString*)name;
+- (instancetype) initWithId:(NSInteger*)id_school name:(NSString*)name;
 
 @end

@@ -10,14 +10,14 @@
 
 @interface Role : NSObject {
     
-    NSInteger id_role_;
+    NSInteger* id_role_;
     NSString* name_;
     
 }
 
-@property (nonatomic, assign) NSInteger id_role;
+@property (nonatomic, assign) NSInteger* id_role;
 @property (nonatomic, strong) NSString* name;
 
-- (instancetype) initWithId:(NSInteger)id_role name:(NSString*)name;
+- (instancetype) initWithId:(NSInteger*)id_role name:(NSString*)name;
 
 @end

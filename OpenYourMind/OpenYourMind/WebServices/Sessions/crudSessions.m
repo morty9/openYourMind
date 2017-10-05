@@ -1,17 +1,17 @@
 //
-//  crudUsers.m
+//  crudSessions.m
 //  OpenYourMind
 //
 //  Created by Bérangère La Touche on 05/10/2017.
 //  Copyright © 2017 Bérangère La Touche. All rights reserved.
 //
 
-#import "crudUsers.h"
-#import "Users.h"
+#import "crudSessions.h"
 #import "SynchronousMethod.h"
+#import "Session.h"
 #import "APIKeys.h"
 
-@implementation crudUsers {
+@implementation crudSessions {
     SynchronousMethod* synchronousMethod;
 }
 
@@ -21,28 +21,25 @@
     self = [super init];
     
     if (self != nil) {
-        self.userList = [[NSMutableArray<Users*> alloc] init];
-        self.user = [[Users alloc] init];
+        self.sessionList = [[NSMutableArray<Session*> alloc] init];
+        self.session = [[Session alloc] init];
     }
     return self;
 }
 
 
-- (void) addLastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password classUser:(NSString*)classUser id_school:(NSInteger*)id_school id_role:(NSInteger*)id_role callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) addDescription:(NSString*)description id_asso:(NSInteger*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle callback:(void (^)(NSError *error, BOOL success))callback {
     
     self.dictError = [[NSDictionary alloc] init];
     
-    NSURL *url = [NSURL URLWithString:kUser_api];
+    NSURL *url = [NSURL URLWithString:kSessions_api];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"POST"];
     
-    NSDictionary<NSString*, NSString*> *jsonData = @{@"name" : lastname,
-                                                     @"firstName" : firstname,
-                                                     @"email" : email,
-                                                     @"password" : password,
-                                                     @"classUser" : classUser,
-                                                     @"school" : [NSNumber numberWithInteger:*id_school],
-                                                     @"role" : [NSNumber numberWithInteger:*id_role]};
+    NSDictionary<NSString*, NSString*> *jsonData = @{@"description" : description,
+                                                     @"id_asso" : [NSNumber numberWithInteger:*id_asso],
+                                                     @"dateSession" : dateSession,
+                                                     @"salle" : salle};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];
@@ -78,9 +75,9 @@
 }
 
 
-- (void) getUsers:(void (^)(NSError *error, BOOL success))callback {
+- (void) getSessions:(void (^)(NSError *error, BOOL success))callback {
     
-    NSURL *url = [NSURL URLWithString:kUser_api];
+    NSURL *url = [NSURL URLWithString:kSessions_api];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"GET"];
     
@@ -93,19 +90,16 @@
         NSData* jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
         
-        for (NSDictionary* user in jsonDict) {
-            NSNumber* tmp_id = [user valueForKey:@"id"];
-            NSString* tmp_lastname = [user valueForKey:@"lastname"];
-            NSString* tmp_firstname = [user valueForKey:@"firstname"];
-            NSString* tmp_email = [user valueForKey:@"email"];
-            NSString* tmp_password = [user valueForKey:@"password"];
-            NSString* tmp_class = [user valueForKey:@"classUser"];
-            NSNumber* tmp_id_role = [user valueForKey:@"id_role"];
-            NSNumber* tmp_id_school = [user valueForKey:@"id_school"];
+        for (NSDictionary* session in jsonDict) {
+            NSNumber* tmp_id = [session valueForKey:@"id"];
+            NSString* tmp_description = [session valueForKey:@"description"];
+            NSString* tmp_id_asso = [session valueForKey:@"id_asso"];
+            NSDate* tmp_date = [session valueForKey:@"date"];
+            NSString* tmp_salle = [session valueForKey:@"salle"];
             
-            Users* u = [[Users alloc] initWithId:[tmp_id integerValue] lastname:tmp_lastname firstname:tmp_firstname email:tmp_email password:tmp_password classUser:tmp_class id_role:[tmp_id_role integerValue] id_school:[tmp_id_school integerValue]];
+            Session* s = [[Session alloc] initWithId:[tmp_id integerValue] description:tmp_description date:tmp_date salle:tmp_salle id_asso:[tmp_id_asso integerValue]];
             
-            [self.userList addObject:u];
+            [self.sessionList addObject:s];
         }
         
         
@@ -118,9 +112,9 @@
 }
 
 
-- (void) getUserById:(NSInteger*)userId callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) getSessionById:(NSInteger*)sessionId callback:(void (^)(NSError *error, BOOL success))callback {
     
-    NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)userId]]]];
+    NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)sessionId]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"GET"];
     
@@ -145,18 +139,12 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             NSNumber* tmp_id = [jsonDict valueForKey:@"id"];
-            NSString* tmp_lastname = [jsonDict valueForKey:@"lastname"];
-            NSString* tmp_firstname = [jsonDict valueForKey:@"firstname"];
-            NSString* tmp_email = [jsonDict valueForKey:@"email"];
-            NSString* tmp_password = [jsonDict valueForKey:@"password"];
-            NSString* tmp_class = [jsonDict valueForKey:@"class"];
-            NSNumber* tmp_id_role = [jsonDict valueForKey:@"id_role"];
-            NSNumber* tmp_id_school = [jsonDict valueForKey:@"id_school"];
+            NSString* tmp_description = [jsonDict valueForKey:@"description"];
+            NSString* tmp_id_asso = [jsonDict valueForKey:@"id_asso"];
+            NSDate* tmp_date = [jsonDict valueForKey:@"date"];
+            NSString* tmp_salle = [jsonDict valueForKey:@"salle"];
             
-            self.user = [[Users alloc] initWithId:[tmp_id integerValue] lastname:tmp_lastname firstname:tmp_firstname email:tmp_email password:tmp_password classUser:tmp_class id_role:[tmp_id_role integerValue] id_school:[tmp_id_school integerValue]];
-            
-            
-            NSLog(@"User %@", self.user);
+            self.session = [[Session alloc] initWithId:[tmp_id integerValue] description:tmp_description date:tmp_date salle:tmp_salle id_asso:[tmp_id_asso integerValue]];
             
             callback(error, true);
             
@@ -167,21 +155,18 @@
 }
 
 
-- (void) updateUserId:(NSInteger*)id_user lastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password class:(NSString*)class id_role:(NSInteger*)id_role id_school:(NSInteger*)id_school token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) updateSessionId:(NSInteger*)id_session description:(NSString*)description id_asso:(NSInteger*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
     
-    NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_user]]]];
+    NSURL *url = [NSURL URLWithString:[kSessions_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_session]]]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"PUT"];
     [request setValue:token forHTTPHeaderField:@"Authorization"];
     
-    NSDictionary<NSString*, NSString*> *jsonData = @{@"name" : lastname,
-                                                     @"firstName" : firstname,
-                                                     @"email" : email,
-                                                     @"password" : password,
-                                                     @"class" : class,
-                                                     @"school" : [NSNumber numberWithInteger:*id_school],
-                                                     @"role" : [NSNumber numberWithInteger:*id_role]};
+    NSDictionary<NSString*, NSString*> *jsonData = @{@"description" : description,
+                                                     @"id_asso" : [NSNumber numberWithInteger:*id_asso],
+                                                     @"dateSession" : dateSession,
+                                                     @"salle" : salle};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];
@@ -208,10 +193,9 @@
     
 }
 
-
-- (void) deleteUserWithId:(NSInteger*)id_user token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) deleteSessionWithId:(NSInteger*)id_session token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
-    NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_user]]]];
+    NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_session]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     
     [request setHTTPMethod:@"DELETE"];
