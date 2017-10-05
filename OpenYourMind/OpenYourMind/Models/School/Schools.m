@@ -10,15 +10,15 @@
 
 @implementation Schools
 
-@synthesize schoolId = schoolId_;
+@synthesize id_school = id_school_;
 @synthesize name = name_;
 
-- (instancetype)initWithId:(NSInteger)schoolId name:(NSString *)name {
+- (instancetype) initWithId:(NSInteger)id_school name:(NSString*)name {
     
     self = [super init];
     
     if (self != nil) {
-        self.schoolId = schoolId;
+        self.id_school = id_school;
         self.name = name;
     }
     

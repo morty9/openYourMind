@@ -41,17 +41,17 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString* cellId = @"CellTableView";
+//    static NSString* cellId = @"CellTableView";
+//    
+//    CellTableView* cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+//    
+//    if(cell == nil) {
+//        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CellTableView" owner:self options:nil];
+//        cell = [nib objectAtIndex:0];
+//    }
     
-    CellTableView* cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
-    if(cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CellTableView" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-    
-    
-    return cell;
+    return 0;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

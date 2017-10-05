@@ -10,14 +10,14 @@
 
 @interface Type : NSObject {
     
-    NSInteger typeId_;
-    NSString* type_;
+    NSInteger id_type_;
+    NSString* status_;
     
 }
 
-@property (nonatomic, assign) NSInteger typeId;
-@property (nonatomic, strong) NSString* type;
+@property (nonatomic, assign) NSInteger id_type;
+@property (nonatomic, strong) NSString* status;
 
-- (instancetype) initWithId:(NSInteger)typeId type:(NSString*)type;
+- (instancetype) initWithId:(NSInteger)id_type status:(NSString*)status;
 
 @end
