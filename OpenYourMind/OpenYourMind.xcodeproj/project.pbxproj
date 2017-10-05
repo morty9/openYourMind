@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03ED97E51F869735001E661B /* LabSreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ED97E31F869735001E661B /* LabSreenViewController.m */; };
+		03ED97E61F869735001E661B /* LabSreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03ED97E41F869735001E661B /* LabSreenViewController.xib */; };
 		0886D6211F86610F004F2A95 /* Types.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6201F86610F004F2A95 /* Types.m */; };
 		0886D6261F86656E004F2A95 /* crudEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6251F86656E004F2A95 /* crudEvents.m */; };
 		0886D6291F86657A004F2A95 /* crudSessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6281F86657A004F2A95 /* crudSessions.m */; };
@@ -65,6 +67,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03ED97E21F869735001E661B /* LabSreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabSreenViewController.h; sourceTree = "<group>"; };
+		03ED97E31F869735001E661B /* LabSreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabSreenViewController.m; sourceTree = "<group>"; };
+		03ED97E41F869735001E661B /* LabSreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabSreenViewController.xib; sourceTree = "<group>"; };
 		0886D61F1F86610F004F2A95 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 		0886D6201F86610F004F2A95 /* Types.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Types.m; sourceTree = "<group>"; };
 		0886D6241F86656E004F2A95 /* crudEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudEvents.h; sourceTree = "<group>"; };
@@ -342,6 +347,9 @@
 		08DC4E691F85238F000E0D57 /* LabScreen */ = {
 			isa = PBXGroup;
 			children = (
+				03ED97E21F869735001E661B /* LabSreenViewController.h */,
+				03ED97E31F869735001E661B /* LabSreenViewController.m */,
+				03ED97E41F869735001E661B /* LabSreenViewController.xib */,
 			);
 			path = LabScreen;
 			sourceTree = "<group>";
@@ -639,6 +647,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03ED97E61F869735001E661B /* LabSreenViewController.xib in Resources */,
 				08DC4EA61F85A031000E0D57 /* HomeScreenViewController.xib in Resources */,
 				08DC4E961F858ACB000E0D57 /* AssosiationViewController.xib in Resources */,
 				08DC4E3F1F8522C8000E0D57 /* LaunchScreen.storyboard in Resources */,
@@ -690,6 +699,7 @@
 				08DC4EC51F863607000E0D57 /* Event.m in Sources */,
 				0886D6291F86657A004F2A95 /* crudSessions.m in Sources */,
 				08DC4EBC1F86339E000E0D57 /* Inscrits.m in Sources */,
+				03ED97E51F869735001E661B /* LabSreenViewController.m in Sources */,
 				08DC4EB41F8629D0000E0D57 /* SynchronousMethod.m in Sources */,
 				0886D6351F868091004F2A95 /* crudInscrit.m in Sources */,
 				08DC4E951F858ACB000E0D57 /* AssosiationViewController.m in Sources */,
