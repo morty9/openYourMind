@@ -11,5 +11,7 @@
 @interface AssosiationViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UICollectionView *assoCollectionView;
+@property (strong, nonatomic) UISearchController *searchController;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

@@ -18,6 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self designPage];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,10 +30,7 @@
 - (void) designPage {
     
     self.navigationItem.title = [NSString stringWithFormat:@"Profil"];
-    
-    //image profil
-//    imageProfil.layer.cornerRadius = imageProfil.frame.size.width / 2;
-//    imageProfil.clipsToBounds = YES;
+
     
     //border name text field
     CALayer *borderName = [CALayer layer];

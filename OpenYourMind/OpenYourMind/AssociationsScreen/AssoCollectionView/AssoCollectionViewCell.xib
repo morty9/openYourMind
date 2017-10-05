@@ -19,33 +19,26 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukv-97-1Xg">
-                        <rect key="frame" x="20" y="16" width="193" height="30"/>
+                        <rect key="frame" x="25" y="29" width="350" height="44"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="193" id="0Pp-o5-jNE"/>
-                            <constraint firstAttribute="height" constant="30" id="iTz-z6-UwF"/>
+                            <constraint firstAttribute="width" constant="350" id="0Pp-o5-jNE"/>
+                            <constraint firstAttribute="height" constant="44" id="iTz-z6-UwF"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUu-I4-otE">
-                        <rect key="frame" x="352" y="92" width="40" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="C3T-oS-OaA"/>
-                            <constraint firstAttribute="width" constant="40" id="Ejd-TM-CdG"/>
-                        </constraints>
-                        <state key="normal" title="F"/>
-                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.77647060160000003" green="0.5725489855" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="XUu-I4-otE" secondAttribute="trailing" constant="8" id="A6X-1O-VEJ"/>
-                <constraint firstItem="ukv-97-1Xg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="DXd-Ef-eQc"/>
-                <constraint firstAttribute="bottom" secondItem="XUu-I4-otE" secondAttribute="bottom" constant="8" id="Iq5-1x-IlT"/>
-                <constraint firstItem="ukv-97-1Xg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="adK-ng-lRy"/>
+                <constraint firstItem="ukv-97-1Xg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="29" id="DXd-Ef-eQc"/>
+                <constraint firstItem="ukv-97-1Xg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="adK-ng-lRy"/>
             </constraints>
-            <point key="canvasLocation" x="33.5" y="54"/>
+            <connections>
+                <outlet property="titleAsso" destination="ukv-97-1Xg" id="C7C-Oc-mGV"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="54"/>
         </collectionViewCell>
     </objects>
 </document>
