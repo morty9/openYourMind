@@ -1,17 +1,17 @@
 //
-//  crudEvents.m
+//  crudUsers.m
 //  OpenYourMind
 //
 //  Created by Bérangère La Touche on 05/10/2017.
 //  Copyright © 2017 Bérangère La Touche. All rights reserved.
 //
 
-#import "crudEvents.h"
-#import "Event.h"
+#import "crudNotes.h"
+#import "Notes.h"
 #import "SynchronousMethod.h"
 #import "APIKeys.h"
 
-@implementation crudEvents {
+@implementation crudNotes {
     SynchronousMethod* synchronousMethod;
 }
 
@@ -21,25 +21,24 @@
     self = [super init];
     
     if (self != nil) {
-        self.eventList = [[NSMutableArray<Event*> alloc] init];
-        self.event = [[Event alloc] init];
+        self.noteList = [[NSMutableArray<Notes*> alloc] init];
+        self.note = [[Notes alloc] init];
     }
     return self;
 }
 
 
-- (void) addDescription:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) addDescription:(NSNumber*)description id_inscrit:(NSNumber*)id_inscrit id_session:(NSNumber*)id_session callback:(void (^)(NSError *error, BOOL success))callback {
     
     self.dictError = [[NSDictionary alloc] init];
     
-    NSURL *url = [NSURL URLWithString:kEvents_api];
+    NSURL *url = [NSURL URLWithString:kNotes_api];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"POST"];
     
     NSDictionary<NSString*, NSString*> *jsonData = @{@"description" : description,
-                                                     @"id_asso" : id_asso,
-                                                     @"dateSession" : dateSession,
-                                                     @"salle" : salle};
+                                                     @"id_inscrit" : id_inscrit,
+                                                     @"id_session" : id_session};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];
@@ -75,9 +74,9 @@
 }
 
 
-- (void) getEvent:(void (^)(NSError *error, BOOL success))callback {
+- (void) getNotes:(void (^)(NSError *error, BOOL success))callback {
     
-    NSURL *url = [NSURL URLWithString:kEvents_api];
+    NSURL *url = [NSURL URLWithString:kNotes_api];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"GET"];
     
@@ -90,16 +89,15 @@
         NSData* jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
         
-        for (NSDictionary* session in jsonDict) {
-            NSNumber* tmp_id = [session valueForKey:@"id"];
-            NSString* tmp_description = [session valueForKey:@"description"];
-            NSNumber* tmp_id_asso = [session valueForKey:@"id_asso"];
-            NSDate* tmp_date = [session valueForKey:@"date"];
-            NSString* tmp_salle = [session valueForKey:@"salle"];
+        for (NSDictionary* note in jsonDict) {
+            NSNumber* tmp_id = [note valueForKey:@"id"];
+            NSNumber* tmp_description = [note valueForKey:@"description"];
+            NSNumber* tmp_id_inscrit = [note valueForKey:@"id_inscrit"];
+            NSNumber* tmp_id_session = [note valueForKey:@"id_session"];
             
-            Event* e = [[Event alloc] initWithId:tmp_id description:tmp_description date:tmp_date salle:tmp_salle id_asso:tmp_id_asso];
+            Notes* n = [[Notes alloc] initWithId:tmp_id description:tmp_description id_inscrit:tmp_id_inscrit id_session:tmp_id_session];
             
-            [self.eventList addObject:e];
+            [self.noteList addObject:n];
         }
         
         
@@ -112,9 +110,9 @@
 }
 
 
-- (void) getEventById:(NSNumber*)eventId callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) getNoteById:(NSNumber*)noteId callback:(void (^)(NSError *error, BOOL success))callback {
     
-    NSURL *url = [NSURL URLWithString:[kEvents_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)eventId]]]];
+    NSURL *url = [NSURL URLWithString:[kNotes_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)noteId]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"GET"];
     
@@ -138,13 +136,19 @@
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSNumber* tmp_id = [jsonDict valueForKey:@"id"];
-            NSString* tmp_description = [jsonDict valueForKey:@"description"];
-            NSNumber* tmp_id_asso = [jsonDict valueForKey:@"id_asso"];
-            NSDate* tmp_date = [jsonDict valueForKey:@"date"];
-            NSString* tmp_salle = [jsonDict valueForKey:@"salle"];
             
-            self.event = [[Event alloc] initWithId:tmp_id description:tmp_description date:tmp_date salle:tmp_salle id_asso:tmp_id_asso];
+            
+            
+            NSNumber* tmp_id = [jsonDict valueForKey:@"id"];
+            NSNumber* tmp_description = [jsonDict valueForKey:@"description"];
+            NSNumber* tmp_id_inscrit = [jsonDict valueForKey:@"id_inscrit"];
+            NSNumber* tmp_id_session = [jsonDict valueForKey:@"id_session"];
+            
+            
+            self.note = [[Notes alloc] initWithId:tmp_id description:tmp_description id_inscrit:tmp_id_inscrit id_session:tmp_id_session];
+            
+            
+            NSLog(@"User %@", self.note);
             
             callback(error, true);
             
@@ -155,18 +159,17 @@
 }
 
 
-- (void) updateEventId:(NSNumber*)id_event description:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) updateNoteId:(NSNumber*)id_note description:(NSNumber*)description id_inscrit:(NSNumber*)id_inscrit id_session:(NSNumber*)id_session token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
     
-    NSURL *url = [NSURL URLWithString:[kEvents_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_event]]]];
+    NSURL *url = [NSURL URLWithString:[kNotes_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_note]]]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"PUT"];
     [request setValue:token forHTTPHeaderField:@"Authorization"];
     
     NSDictionary<NSString*, NSString*> *jsonData = @{@"description" : description,
-                                                     @"id_asso" : id_asso,
-                                                     @"dateSession" : dateSession,
-                                                     @"salle" : salle};
+                                                     @"id_inscrit" : id_inscrit,
+                                                     @"id_session" : id_session};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];
@@ -193,9 +196,10 @@
     
 }
 
-- (void) deleteEventWithId:(NSNumber*)id_event token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+
+- (void) deleteNoteWithId:(NSNumber*)id_note token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
-    NSURL *url = [NSURL URLWithString:[kEvents_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_event]]]];
+    NSURL *url = [NSURL URLWithString:[kNotes_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_note]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     
     [request setHTTPMethod:@"DELETE"];

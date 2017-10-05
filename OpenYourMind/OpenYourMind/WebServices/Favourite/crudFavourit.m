@@ -1,17 +1,17 @@
 //
-//  crudEvents.m
+//  crudFavourit.m
 //  OpenYourMind
 //
-//  Created by Bérangère La Touche on 05/10/2017.
+//  Created by nico on 05/10/2017.
 //  Copyright © 2017 Bérangère La Touche. All rights reserved.
 //
 
-#import "crudEvents.h"
-#import "Event.h"
+#import "crudFavourit.h"
+#import "Favourite.h"
 #import "SynchronousMethod.h"
 #import "APIKeys.h"
 
-@implementation crudEvents {
+@implementation crudFavourit {
     SynchronousMethod* synchronousMethod;
 }
 
@@ -21,25 +21,23 @@
     self = [super init];
     
     if (self != nil) {
-        self.eventList = [[NSMutableArray<Event*> alloc] init];
-        self.event = [[Event alloc] init];
+        self.favouriteList = [[NSMutableArray<Favourite*> alloc] init];
+        self.favourite = [[Favourite alloc] init];
     }
     return self;
 }
 
 
-- (void) addDescription:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) addId_user:(NSNumber*)id_user id_asso:(NSNumber*)id_asso callback:(void (^)(NSError *error, BOOL success))callback {
     
     self.dictError = [[NSDictionary alloc] init];
     
-    NSURL *url = [NSURL URLWithString:kEvents_api];
+    NSURL *url = [NSURL URLWithString:kFavourite_api];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"POST"];
     
-    NSDictionary<NSString*, NSString*> *jsonData = @{@"description" : description,
-                                                     @"id_asso" : id_asso,
-                                                     @"dateSession" : dateSession,
-                                                     @"salle" : salle};
+    NSDictionary<NSString*, NSString*> *jsonData = @{@"id_user" : id_user,
+                                                     @"id_asso" : id_asso};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];
@@ -75,9 +73,9 @@
 }
 
 
-- (void) getEvent:(void (^)(NSError *error, BOOL success))callback {
+- (void) getFavourite:(void (^)(NSError *error, BOOL success))callback {
     
-    NSURL *url = [NSURL URLWithString:kEvents_api];
+    NSURL *url = [NSURL URLWithString:kFavourite_api];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"GET"];
     
@@ -90,16 +88,14 @@
         NSData* jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
         
-        for (NSDictionary* session in jsonDict) {
-            NSNumber* tmp_id = [session valueForKey:@"id"];
-            NSString* tmp_description = [session valueForKey:@"description"];
-            NSNumber* tmp_id_asso = [session valueForKey:@"id_asso"];
-            NSDate* tmp_date = [session valueForKey:@"date"];
-            NSString* tmp_salle = [session valueForKey:@"salle"];
+        for (NSDictionary* favourite in jsonDict) {
+            NSNumber* tmp_id = [favourite valueForKey:@"id"];
+            NSNumber* tmp_id_user = [favourite valueForKey:@"id_user"];
+            NSNumber* tmp_id_asso = [favourite valueForKey:@"id_asso"];
             
-            Event* e = [[Event alloc] initWithId:tmp_id description:tmp_description date:tmp_date salle:tmp_salle id_asso:tmp_id_asso];
+            Favourite* f = [[Favourite alloc] initWithId:tmp_id id_user:tmp_id_user id_asso:tmp_id_asso];
             
-            [self.eventList addObject:e];
+            [self.favouriteList addObject:f];
         }
         
         
@@ -112,9 +108,9 @@
 }
 
 
-- (void) getEventById:(NSNumber*)eventId callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) getFavouriteById:(NSNumber*)favouriteId callback:(void (^)(NSError *error, BOOL success))callback {
     
-    NSURL *url = [NSURL URLWithString:[kEvents_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)eventId]]]];
+    NSURL *url = [NSURL URLWithString:[kFavourite_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)favouriteId]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"GET"];
     
@@ -139,12 +135,13 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             NSNumber* tmp_id = [jsonDict valueForKey:@"id"];
-            NSString* tmp_description = [jsonDict valueForKey:@"description"];
+            NSNumber* tmp_id_user = [jsonDict valueForKey:@"id_user"];
             NSNumber* tmp_id_asso = [jsonDict valueForKey:@"id_asso"];
-            NSDate* tmp_date = [jsonDict valueForKey:@"date"];
-            NSString* tmp_salle = [jsonDict valueForKey:@"salle"];
             
-            self.event = [[Event alloc] initWithId:tmp_id description:tmp_description date:tmp_date salle:tmp_salle id_asso:tmp_id_asso];
+            self.favourite = [[Favourite alloc] initWithId:tmp_id id_user:tmp_id_user id_asso:tmp_id_asso];
+            
+            
+            NSLog(@"User %@", self.favourite);
             
             callback(error, true);
             
@@ -155,18 +152,16 @@
 }
 
 
-- (void) updateEventId:(NSNumber*)id_event description:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) updateFavouriteId:(NSNumber*)id_favourite id_user:(NSNumber*)id_user id_asso:(NSNumber*)id_asso token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
     
-    NSURL *url = [NSURL URLWithString:[kEvents_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_event]]]];
+    NSURL *url = [NSURL URLWithString:[kFavourite_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_favourite]]]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"PUT"];
     [request setValue:token forHTTPHeaderField:@"Authorization"];
     
-    NSDictionary<NSString*, NSString*> *jsonData = @{@"description" : description,
-                                                     @"id_asso" : id_asso,
-                                                     @"dateSession" : dateSession,
-                                                     @"salle" : salle};
+    NSDictionary<NSString*, NSString*> *jsonData = @{@"id_user" : id_user,
+                                                     @"id_asso" : id_asso};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];
@@ -193,9 +188,10 @@
     
 }
 
-- (void) deleteEventWithId:(NSNumber*)id_event token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+
+- (void) deleteFavouriteWithId:(NSNumber*)id_favourite token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
-    NSURL *url = [NSURL URLWithString:[kEvents_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_event]]]];
+    NSURL *url = [NSURL URLWithString:[kFavourite_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_favourite]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     
     [request setHTTPMethod:@"DELETE"];

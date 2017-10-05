@@ -10,6 +10,9 @@
 		0886D6211F86610F004F2A95 /* Types.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6201F86610F004F2A95 /* Types.m */; };
 		0886D6261F86656E004F2A95 /* crudEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6251F86656E004F2A95 /* crudEvents.m */; };
 		0886D6291F86657A004F2A95 /* crudSessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6281F86657A004F2A95 /* crudSessions.m */; };
+		0886D62C1F868019004F2A95 /* crudFavourit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D62B1F868019004F2A95 /* crudFavourit.m */; };
+		0886D6311F868071004F2A95 /* crudNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6301F868071004F2A95 /* crudNotes.m */; };
+		0886D6351F868091004F2A95 /* crudInscrit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6341F868091004F2A95 /* crudInscrit.m */; };
 		08DC4E311F8522C8000E0D57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E301F8522C8000E0D57 /* main.m */; };
 		08DC4E341F8522C8000E0D57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E331F8522C8000E0D57 /* AppDelegate.m */; };
 		08DC4E3C1F8522C8000E0D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E3B1F8522C8000E0D57 /* Assets.xcassets */; };
@@ -68,6 +71,12 @@
 		0886D6251F86656E004F2A95 /* crudEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudEvents.m; sourceTree = "<group>"; };
 		0886D6271F86657A004F2A95 /* crudSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudSessions.h; sourceTree = "<group>"; };
 		0886D6281F86657A004F2A95 /* crudSessions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudSessions.m; sourceTree = "<group>"; };
+		0886D62B1F868019004F2A95 /* crudFavourit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudFavourit.m; sourceTree = "<group>"; };
+		0886D62D1F868041004F2A95 /* crudFavourit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crudFavourit.h; sourceTree = "<group>"; };
+		0886D62F1F868071004F2A95 /* crudNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudNotes.h; sourceTree = "<group>"; };
+		0886D6301F868071004F2A95 /* crudNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudNotes.m; sourceTree = "<group>"; };
+		0886D6331F868091004F2A95 /* crudInscrit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudInscrit.h; sourceTree = "<group>"; };
+		0886D6341F868091004F2A95 /* crudInscrit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudInscrit.m; sourceTree = "<group>"; };
 		08DC4E2C1F8522C8000E0D57 /* OpenYourMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenYourMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DC4E301F8522C8000E0D57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08DC4E321F8522C8000E0D57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -172,6 +181,24 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
+		0886D62A1F867FF7004F2A95 /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				0886D62D1F868041004F2A95 /* crudFavourit.h */,
+				0886D62B1F868019004F2A95 /* crudFavourit.m */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
+		0886D6321F86807A004F2A95 /* Inscrits */ = {
+			isa = PBXGroup;
+			children = (
+				0886D6331F868091004F2A95 /* crudInscrit.h */,
+				0886D6341F868091004F2A95 /* crudInscrit.m */,
+			);
+			path = Inscrits;
+			sourceTree = "<group>";
+		};
 		08DC4E231F8522C8000E0D57 = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +272,8 @@
 		08DC4E621F8522DD000E0D57 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				0886D6321F86807A004F2A95 /* Inscrits */,
+				0886D62A1F867FF7004F2A95 /* Favourite */,
 				0886D6231F86652A004F2A95 /* Events */,
 				0886D6221F866521004F2A95 /* Sessions */,
 				08DC4EAB1F85A43E000E0D57 /* Type */,
@@ -428,6 +457,8 @@
 		08DC4EA91F85A426000E0D57 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				0886D62F1F868071004F2A95 /* crudNotes.h */,
+				0886D6301F868071004F2A95 /* crudNotes.m */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -647,10 +678,12 @@
 				08DC4EC21F863518000E0D57 /* Favourite.m in Sources */,
 				08DC4E341F8522C8000E0D57 /* AppDelegate.m in Sources */,
 				08DC4E751F854FD3000E0D57 /* FirstScreenViewController.m in Sources */,
+				0886D62C1F868019004F2A95 /* crudFavourit.m in Sources */,
 				08DC4E311F8522C8000E0D57 /* main.m in Sources */,
 				08DC4EBF1F86349E000E0D57 /* Role.m in Sources */,
 				0886D6211F86610F004F2A95 /* Types.m in Sources */,
 				08DC4E841F857684000E0D57 /* Schools.m in Sources */,
+				0886D6311F868071004F2A95 /* crudNotes.m in Sources */,
 				08DC4E8A1F85832F000E0D57 /* Users.m in Sources */,
 				08DC4E6F1F854A98000E0D57 /* SignUpViewController.m in Sources */,
 				08DC4E871F8581EE000E0D57 /* Notes.m in Sources */,
@@ -658,6 +691,7 @@
 				0886D6291F86657A004F2A95 /* crudSessions.m in Sources */,
 				08DC4EBC1F86339E000E0D57 /* Inscrits.m in Sources */,
 				08DC4EB41F8629D0000E0D57 /* SynchronousMethod.m in Sources */,
+				0886D6351F868091004F2A95 /* crudInscrit.m in Sources */,
 				08DC4E951F858ACB000E0D57 /* AssosiationViewController.m in Sources */,
 				08DC4EA01F859A50000E0D57 /* ProfilScreenViewController.m in Sources */,
 				08DC4E7A1F8552B6000E0D57 /* LoginScreenViewController.m in Sources */,

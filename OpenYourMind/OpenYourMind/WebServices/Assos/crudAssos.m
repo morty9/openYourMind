@@ -37,10 +37,10 @@
     [request setHTTPMethod:@"POST"];
     
     NSDictionary<NSString*, NSString*> *jsonData = @{@"name" : name,
-                                                     @"id_school" : [NSNumber numberWithInteger:*id_school],
+                                                     @"id_school" : id_school,
                                                      @"description" : description,
-                                                     @"id_user" : [NSNumber numberWithInteger:*id_user],
-                                                     @"id_type" : [NSNumber numberWithInteger:*id_type]};
+                                                     @"id_user" : id_user,
+                                                     @"id_type" : id_type};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];
@@ -93,13 +93,13 @@
         
         for (NSDictionary* asso in jsonDict) {
             NSNumber* tmp_id = [asso valueForKey:@"id"];
-            NSString* tmp_id_school = [asso valueForKey:@"id_school"];
+            NSNumber* tmp_id_school = [asso valueForKey:@"id_school"];
             NSString* tmp_name = [asso valueForKey:@"name"];
             NSString* tmp_description = [asso valueForKey:@"description"];
-            NSString* tmp_id_user = [asso valueForKey:@"id_user"];
-            NSString* tmp_id_type = [asso valueForKey:@"id_type"];
+            NSNumber* tmp_id_user = [asso valueForKey:@"id_user"];
+            NSNumber* tmp_id_type = [asso valueForKey:@"id_type"];
             
-            Assos* a = [[Assos alloc] initWithId:[tmp_id integerValue] id_school:[tmp_id_school integerValue] name:tmp_name description:tmp_description id_user:[tmp_id_user integerValue] id_type:[tmp_id_type integerValue]];
+            Assos* a = [[Assos alloc] initWithId:tmp_id id_school:tmp_id_school name:tmp_name description:tmp_description id_user:tmp_id_user id_type:tmp_id_type];
             
             [self.assoList addObject:a];
         }
@@ -141,13 +141,13 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             NSNumber* tmp_id = [jsonDict valueForKey:@"id"];
-            NSString* tmp_id_school = [jsonDict valueForKey:@"id_school"];
+            NSNumber* tmp_id_school = [jsonDict valueForKey:@"id_school"];
             NSString* tmp_name = [jsonDict valueForKey:@"name"];
             NSString* tmp_description = [jsonDict valueForKey:@"description"];
-            NSString* tmp_id_user = [jsonDict valueForKey:@"id_user"];
-            NSString* tmp_id_type = [jsonDict valueForKey:@"id_type"];
+            NSNumber* tmp_id_user = [jsonDict valueForKey:@"id_user"];
+            NSNumber* tmp_id_type = [jsonDict valueForKey:@"id_type"];
             
-            self.asso = [[Assos alloc] initWithId:[tmp_id integerValue] id_school:[tmp_id_school integerValue] name:tmp_name description:tmp_description id_user:[tmp_id_user integerValue] id_type:[tmp_id_type integerValue]];
+            self.asso = [[Assos alloc] initWithId:tmp_id id_school:tmp_id_school name:tmp_name description:tmp_description id_user:tmp_id_user id_type:tmp_id_type];
             
             callback(error, true);
             
@@ -166,11 +166,11 @@
     [request setHTTPMethod:@"PUT"];
     [request setValue:token forHTTPHeaderField:@"Authorization"];
     
-    NSDictionary<NSString*, NSString*> *jsonData = @{@"id_school" : [NSNumber numberWithInteger:*id_school],
+    NSDictionary<NSString*, NSString*> *jsonData = @{@"id_school" : id_school,
                                                      @"name" : name,
                                                      @"description" : description,
-                                                     @"id_user" : [NSNumber numberWithInteger:*id_asso],
-                                                     @"id_type" : [NSNumber numberWithInteger:*id_type]};
+                                                     @"id_user" : id_asso,
+                                                     @"id_type" : id_type};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];

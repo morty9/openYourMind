@@ -17,9 +17,9 @@
     
 }
 
-@property (nonatomic, assign) NSNumber* id_inscrit;
-@property (nonatomic, assign) NSNumber* id_user;
-@property (nonatomic, assign) NSNumber* id_session;
+@property (nonatomic, strong) NSNumber* id_inscrit;
+@property (nonatomic, strong) NSNumber* id_user;
+@property (nonatomic, strong) NSNumber* id_session;
 @property (nonatomic, assign) BOOL status;
 
 - (instancetype) initWithId:(NSNumber*)id_inscrit id_user:(NSNumber*)id_user id_session:(NSNumber*)id_session status:(BOOL)status;

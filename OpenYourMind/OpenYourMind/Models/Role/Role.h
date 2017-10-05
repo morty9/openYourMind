@@ -15,7 +15,7 @@
     
 }
 
-@property (nonatomic, assign) NSNumber* id_role;
+@property (nonatomic, strong) NSNumber* id_role;
 @property (nonatomic, strong) NSString* name;
 
 - (instancetype) initWithId:(NSNumber*)id_role name:(NSString*)name;

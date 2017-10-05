@@ -41,8 +41,8 @@
                                                      @"email" : email,
                                                      @"password" : password,
                                                      @"classUser" : classUser,
-                                                     @"school" : [NSNumber numberWithInteger:*id_school],
-                                                     @"role" : [NSNumber numberWithInteger:*id_role]};
+                                                     @"school" : id_school,
+                                                     @"role" : id_role};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];
@@ -103,7 +103,7 @@
             NSNumber* tmp_id_role = [user valueForKey:@"id_role"];
             NSNumber* tmp_id_school = [user valueForKey:@"id_school"];
             
-            Users* u = [[Users alloc] initWithId:[tmp_id integerValue] lastname:tmp_lastname firstname:tmp_firstname email:tmp_email password:tmp_password classUser:tmp_class id_role:[tmp_id_role integerValue] id_school:[tmp_id_school integerValue]];
+            Users* u = [[Users alloc] initWithId:tmp_id lastname:tmp_lastname firstname:tmp_firstname email:tmp_email password:tmp_password classUser:tmp_class id_role:tmp_id_role id_school:tmp_id_school];
             
             [self.userList addObject:u];
         }
@@ -153,7 +153,7 @@
             NSNumber* tmp_id_role = [jsonDict valueForKey:@"id_role"];
             NSNumber* tmp_id_school = [jsonDict valueForKey:@"id_school"];
             
-            self.user = [[Users alloc] initWithId:[tmp_id integerValue] lastname:tmp_lastname firstname:tmp_firstname email:tmp_email password:tmp_password classUser:tmp_class id_role:[tmp_id_role integerValue] id_school:[tmp_id_school integerValue]];
+            self.user = [[Users alloc] initWithId:tmp_id lastname:tmp_lastname firstname:tmp_firstname email:tmp_email password:tmp_password classUser:tmp_class id_role:tmp_id_role id_school:tmp_id_school];
             
             
             NSLog(@"User %@", self.user);
@@ -180,8 +180,8 @@
                                                      @"email" : email,
                                                      @"password" : password,
                                                      @"class" : class,
-                                                     @"school" : [NSNumber numberWithInteger:*id_school],
-                                                     @"role" : [NSNumber numberWithInteger:*id_role]};
+                                                     @"school" : id_school,
+                                                     @"role" : id_role};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];

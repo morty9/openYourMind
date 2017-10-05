@@ -17,10 +17,10 @@
     
 }
 
-@property (nonatomic, assign) NSNumber* id_note;
-@property (nonatomic, assign) NSNumber* description;
-@property (nonatomic, assign) NSNumber* id_inscrit;
-@property (nonatomic, assign) NSNumber* id_session;
+@property (nonatomic, strong) NSNumber* id_note;
+@property (nonatomic, strong) NSNumber* description;
+@property (nonatomic, strong) NSNumber* id_inscrit;
+@property (nonatomic, strong) NSNumber* id_session;
 
 - (instancetype) initWithId:(NSNumber*)id_note description:(NSNumber*)description id_inscrit:(NSNumber*)id_inscrit id_session:(NSNumber*)id_session;
 

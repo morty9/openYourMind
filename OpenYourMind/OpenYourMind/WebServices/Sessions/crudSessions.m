@@ -37,7 +37,7 @@
     [request setHTTPMethod:@"POST"];
     
     NSDictionary<NSString*, NSString*> *jsonData = @{@"description" : description,
-                                                     @"id_asso" : [NSNumber numberWithInteger:*id_asso],
+                                                     @"id_asso" : id_asso,
                                                      @"dateSession" : dateSession,
                                                      @"salle" : salle};
     
@@ -93,11 +93,11 @@
         for (NSDictionary* session in jsonDict) {
             NSNumber* tmp_id = [session valueForKey:@"id"];
             NSString* tmp_description = [session valueForKey:@"description"];
-            NSString* tmp_id_asso = [session valueForKey:@"id_asso"];
+            NSNumber* tmp_id_asso = [session valueForKey:@"id_asso"];
             NSDate* tmp_date = [session valueForKey:@"date"];
             NSString* tmp_salle = [session valueForKey:@"salle"];
             
-            Session* s = [[Session alloc] initWithId:[tmp_id integerValue] description:tmp_description date:tmp_date salle:tmp_salle id_asso:[tmp_id_asso integerValue]];
+            Session* s = [[Session alloc] initWithId:tmp_id description:tmp_description date:tmp_date salle:tmp_salle id_asso:tmp_id_asso];
             
             [self.sessionList addObject:s];
         }
@@ -140,11 +140,11 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             NSNumber* tmp_id = [jsonDict valueForKey:@"id"];
             NSString* tmp_description = [jsonDict valueForKey:@"description"];
-            NSString* tmp_id_asso = [jsonDict valueForKey:@"id_asso"];
+            NSNumber* tmp_id_asso = [jsonDict valueForKey:@"id_asso"];
             NSDate* tmp_date = [jsonDict valueForKey:@"date"];
             NSString* tmp_salle = [jsonDict valueForKey:@"salle"];
             
-            self.session = [[Session alloc] initWithId:[tmp_id integerValue] description:tmp_description date:tmp_date salle:tmp_salle id_asso:[tmp_id_asso integerValue]];
+            self.session = [[Session alloc] initWithId:tmp_id description:tmp_description date:tmp_date salle:tmp_salle id_asso:tmp_id_asso];
             
             callback(error, true);
             
@@ -164,7 +164,7 @@
     [request setValue:token forHTTPHeaderField:@"Authorization"];
     
     NSDictionary<NSString*, NSString*> *jsonData = @{@"description" : description,
-                                                     @"id_asso" : [NSNumber numberWithInteger:*id_asso],
+                                                     @"id_asso" : id_asso,
                                                      @"dateSession" : dateSession,
                                                      @"salle" : salle};
     

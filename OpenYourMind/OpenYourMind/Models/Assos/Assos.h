@@ -18,12 +18,12 @@
     NSNumber* id_type_;
 }
 
-@property (nonatomic, assign) NSNumber* id_asso;
-@property (nonatomic, assign) NSNumber* id_school;
+@property (nonatomic, strong) NSNumber* id_asso;
+@property (nonatomic, strong) NSNumber* id_school;
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSString* description;
-@property (nonatomic, assign) NSNumber* id_user;
-@property (nonatomic, assign) NSNumber* id_type;
+@property (nonatomic, strong) NSNumber* id_user;
+@property (nonatomic, strong) NSNumber* id_type;
 
 - (instancetype) initWithId:(NSNumber*)id_asso id_school:(NSNumber*)id_school name:(NSString*)name description:(NSString*)description id_user:(NSNumber*)id_user id_type:(NSNumber*)id_type;
 

@@ -17,10 +17,10 @@
     NSNumber* id_asso_;
 }
 
-@property (nonatomic, assign) NSNumber* id_session;
+@property (nonatomic, strong) NSNumber* id_session;
 @property (nonatomic, strong) NSString* description;
 @property (nonatomic, strong) NSDate* date;
-@property (nonatomic, assign) NSNumber* id_asso;
+@property (nonatomic, strong) NSNumber* id_asso;
 @property (nonatomic, strong) NSString* salle;
 
 - (instancetype) initWithId:(NSNumber*)id_session description:(NSString*)description date:(NSDate*)date salle:(NSString*)salle id_asso:(NSNumber*)id_asso;

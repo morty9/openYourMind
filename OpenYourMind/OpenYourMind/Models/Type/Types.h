@@ -15,7 +15,7 @@
     
 }
 
-@property (nonatomic, assign) NSNumber* id_type;
+@property (nonatomic, strong) NSNumber* id_type;
 @property (nonatomic, strong) NSString* status;
 
 - (instancetype) initWithId:(NSNumber*)id_type status:(NSString*)status;

@@ -16,9 +16,9 @@
     
 }
 
-@property (nonatomic, assign) NSNumber* id_favourite;
-@property (nonatomic, assign) NSNumber* id_user;
-@property (nonatomic, assign) NSNumber* id_asso;
+@property (nonatomic, strong) NSNumber* id_favourite;
+@property (nonatomic, strong) NSNumber* id_user;
+@property (nonatomic, strong) NSNumber* id_asso;
 
 - (instancetype) initWithId:(NSNumber*)id_favourite id_user:(NSNumber*)id_user id_asso:(NSNumber*)id_asso;
 
