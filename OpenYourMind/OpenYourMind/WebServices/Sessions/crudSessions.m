@@ -28,7 +28,7 @@
 }
 
 
-- (void) addDescription:(NSString*)description id_asso:(NSInteger*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) addDescription:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle callback:(void (^)(NSError *error, BOOL success))callback {
     
     self.dictError = [[NSDictionary alloc] init];
     
@@ -112,7 +112,7 @@
 }
 
 
-- (void) getSessionById:(NSInteger*)sessionId callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) getSessionById:(NSNumber*)sessionId callback:(void (^)(NSError *error, BOOL success))callback {
     
     NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)sessionId]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -155,7 +155,7 @@
 }
 
 
-- (void) updateSessionId:(NSInteger*)id_session description:(NSString*)description id_asso:(NSInteger*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) updateSessionId:(NSNumber*)id_session description:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
     
     NSURL *url = [NSURL URLWithString:[kSessions_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_session]]]];
@@ -193,7 +193,7 @@
     
 }
 
-- (void) deleteSessionWithId:(NSInteger*)id_session token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) deleteSessionWithId:(NSNumber*)id_session token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
     NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_session]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];

@@ -10,21 +10,21 @@
 
 @interface Assos : NSObject {
     
-    NSInteger* id_asso_;
-    NSInteger* id_school_;
+    NSNumber* id_asso_;
+    NSNumber* id_school_;
     NSString* name_;
     NSString* description_;
-    NSInteger* id_user_;
-    NSInteger* id_type_;
+    NSNumber* id_user_;
+    NSNumber* id_type_;
 }
 
-@property (nonatomic, assign) NSInteger* id_asso;
-@property (nonatomic, assign) NSInteger* id_school;
+@property (nonatomic, assign) NSNumber* id_asso;
+@property (nonatomic, assign) NSNumber* id_school;
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSString* description;
-@property (nonatomic, assign) NSInteger* id_user;
-@property (nonatomic, assign) NSInteger* id_type;
+@property (nonatomic, assign) NSNumber* id_user;
+@property (nonatomic, assign) NSNumber* id_type;
 
-- (instancetype) initWithId:(NSInteger*)id_asso id_school:(NSInteger*)id_school name:(NSString*)name description:(NSString*)description id_user:(NSInteger*)id_user id_type:(NSInteger*)id_type;
+- (instancetype) initWithId:(NSNumber*)id_asso id_school:(NSNumber*)id_school name:(NSString*)name description:(NSString*)description id_user:(NSNumber*)id_user id_type:(NSNumber*)id_type;
 
 @end

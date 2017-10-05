@@ -17,7 +17,7 @@
 @synthesize id_user = id_user_;
 @synthesize id_type = id_type_;
 
-- (instancetype) initWithId:(NSInteger*)id_asso id_school:(NSInteger*)id_school name:(NSString*)name description:(NSString*)description id_user:(NSInteger*)id_user id_type:(NSInteger*)id_type {
+- (instancetype) initWithId:(NSNumber*)id_asso id_school:(NSNumber*)id_school name:(NSString*)name description:(NSString*)description id_user:(NSNumber*)id_user id_type:(NSNumber*)id_type {
     
     self = [super init];
     

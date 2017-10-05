@@ -10,18 +10,18 @@
 
 @interface Inscrits : NSObject {
     
-    NSInteger* id_inscrit_;
-    NSInteger* id_user_;
-    NSInteger* id_session_;
+    NSNumber* id_inscrit_;
+    NSNumber* id_user_;
+    NSNumber* id_session_;
     BOOL status_;
     
 }
 
-@property (nonatomic, assign) NSInteger* id_inscrit;
-@property (nonatomic, assign) NSInteger* id_user;
-@property (nonatomic, assign) NSInteger* id_session;
+@property (nonatomic, assign) NSNumber* id_inscrit;
+@property (nonatomic, assign) NSNumber* id_user;
+@property (nonatomic, assign) NSNumber* id_session;
 @property (nonatomic, assign) BOOL status;
 
-- (instancetype) initWithId:(NSInteger*)id_inscrit id_user:(NSInteger*)id_user id_session:(NSInteger*)id_session status:(BOOL)status;
+- (instancetype) initWithId:(NSNumber*)id_inscrit id_user:(NSNumber*)id_user id_session:(NSNumber*)id_session status:(BOOL)status;
 
 @end

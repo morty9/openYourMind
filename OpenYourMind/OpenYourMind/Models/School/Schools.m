@@ -13,7 +13,7 @@
 @synthesize id_school = id_school_;
 @synthesize name = name_;
 
-- (instancetype) initWithId:(NSInteger*)id_school name:(NSString*)name {
+- (instancetype) initWithId:(NSNumber*)id_school name:(NSString*)name {
     
     self = [super init];
     

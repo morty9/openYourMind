@@ -19,7 +19,7 @@
 @synthesize id_role = id_role_;
 @synthesize id_school = id_school_;
 
-- (instancetype) initWithId:(NSInteger*)id_user lastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password classUser:(NSString*)classUser id_role:(NSInteger*)id_role id_school:(NSInteger*)id_school {
+- (instancetype) initWithId:(NSNumber*)id_user lastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password classUser:(NSString*)classUser id_role:(NSNumber*)id_role id_school:(NSNumber*)id_school {
     
     self = [super init];
     

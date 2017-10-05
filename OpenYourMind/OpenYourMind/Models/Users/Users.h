@@ -10,25 +10,25 @@
 
 @interface Users : NSObject {
     
-    NSInteger* id_user_;
+    NSNumber* id_user_;
     NSString* lastname_;
     NSString* firstname_;
     NSString* email_;
     NSString* password_;
     NSString* classUser_;
-    NSInteger* id_role_;
-    NSInteger* id_school_;
+    NSNumber* id_role_;
+    NSNumber* id_school_;
 }
 
-@property (nonatomic, assign) NSInteger* id_user;
+@property (nonatomic, assign) NSNumber* id_user;
 @property (nonatomic, strong) NSString* lastname;
 @property (nonatomic, strong) NSString* firstname;
 @property (nonatomic, strong) NSString* email;
 @property (nonatomic, strong) NSString* password;
 @property (nonatomic, strong) NSString* classUser;
-@property (nonatomic, assign) NSInteger* id_role;
-@property (nonatomic, assign) NSInteger* id_school;
+@property (nonatomic, assign) NSNumber* id_role;
+@property (nonatomic, assign) NSNumber* id_school;
 
-- (instancetype) initWithId:(NSInteger*)id_user lastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password classUser:(NSString*)classUser id_role:(NSInteger*)id_role id_school:(NSInteger*)id_school;
+- (instancetype) initWithId:(NSNumber*)id_user lastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password classUser:(NSString*)classUser id_role:(NSNumber*)id_role id_school:(NSNumber*)id_school;
 
 @end

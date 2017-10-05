@@ -28,7 +28,7 @@
 }
 
 
-- (void) addName:(NSString*)name id_school:(NSInteger*)id_school description:(NSString*)description id_user:(NSInteger*)id_user id_type:(NSInteger*)id_type callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) addName:(NSString*)name id_school:(NSNumber*)id_school description:(NSString*)description id_user:(NSNumber*)id_user id_type:(NSNumber*)id_type callback:(void (^)(NSError *error, BOOL success))callback {
     
     self.dictError = [[NSDictionary alloc] init];
     
@@ -114,7 +114,7 @@
 }
 
 
-- (void) getAssoById:(NSInteger*)userId callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) getAssoById:(NSNumber*)userId callback:(void (^)(NSError *error, BOOL success))callback {
     
     NSURL *url = [NSURL URLWithString:[kAssos_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)userId]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -158,7 +158,7 @@
 }
 
 
-- (void) updateAssoId:(NSInteger*)id_asso id_school:(NSInteger*)id_school name:(NSString*)name description:(NSString*)description id_user:(NSInteger*)password id_type:(NSInteger*)id_type token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) updateAssoId:(NSNumber*)id_asso id_school:(NSNumber*)id_school name:(NSString*)name description:(NSString*)description id_user:(NSNumber*)password id_type:(NSNumber*)id_type token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
     
     NSURL *url = [NSURL URLWithString:[kAssos_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_asso]]]];
@@ -169,7 +169,7 @@
     NSDictionary<NSString*, NSString*> *jsonData = @{@"id_school" : [NSNumber numberWithInteger:*id_school],
                                                      @"name" : name,
                                                      @"description" : description,
-                                                     @"id_user" : [NSNumber numberWithInteger:*id_user],
+                                                     @"id_user" : [NSNumber numberWithInteger:*id_asso],
                                                      @"id_type" : [NSNumber numberWithInteger:*id_type]};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
@@ -198,7 +198,7 @@
 }
 
 
-- (void) deleteAssoWithId:(NSInteger*)id_asso token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) deleteAssoWithId:(NSNumber*)id_asso token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
     NSURL *url = [NSURL URLWithString:[kAssos_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_asso]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];

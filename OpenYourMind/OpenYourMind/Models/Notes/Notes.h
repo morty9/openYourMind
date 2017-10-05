@@ -10,18 +10,18 @@
 
 @interface Notes : NSObject {
     
-    NSInteger* id_note_;
-    NSInteger* description_;
-    NSInteger* id_inscrit_;
-    NSInteger* id_session_;
+    NSNumber* id_note_;
+    NSNumber* description_;
+    NSNumber* id_inscrit_;
+    NSNumber* id_session_;
     
 }
 
-@property (nonatomic, assign) NSInteger* id_note;
-@property (nonatomic, strong) NSInteger* description;
-@property (nonatomic, assign) NSInteger* id_inscrit;
-@property (nonatomic, assign) NSInteger* id_session;
+@property (nonatomic, assign) NSNumber* id_note;
+@property (nonatomic, assign) NSNumber* description;
+@property (nonatomic, assign) NSNumber* id_inscrit;
+@property (nonatomic, assign) NSNumber* id_session;
 
-- (instancetype) initWithId:(NSInteger*)id_note description:(NSInteger*)description id_inscrit:(NSInteger*)id_inscrit id_session:(NSInteger*)id_session;
+- (instancetype) initWithId:(NSNumber*)id_note description:(NSNumber*)description id_inscrit:(NSNumber*)id_inscrit id_session:(NSNumber*)id_session;
 
 @end

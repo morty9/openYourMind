@@ -58,6 +58,9 @@
                     <state key="normal" title="Valider">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="goToAssosiationsScreen:" destination="-1" eventType="touchUpInside" id="YOz-qF-0xP"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

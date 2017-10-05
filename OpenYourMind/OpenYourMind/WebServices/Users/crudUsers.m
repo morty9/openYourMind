@@ -28,7 +28,7 @@
 }
 
 
-- (void) addLastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password classUser:(NSString*)classUser id_school:(NSInteger*)id_school id_role:(NSInteger*)id_role callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) addLastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password classUser:(NSString*)classUser id_school:(NSNumber*)id_school id_role:(NSNumber*)id_role callback:(void (^)(NSError *error, BOOL success))callback {
     
     self.dictError = [[NSDictionary alloc] init];
     
@@ -118,7 +118,7 @@
 }
 
 
-- (void) getUserById:(NSInteger*)userId callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) getUserById:(NSNumber*)userId callback:(void (^)(NSError *error, BOOL success))callback {
     
     NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)userId]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -167,7 +167,7 @@
 }
 
 
-- (void) updateUserId:(NSInteger*)id_user lastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password class:(NSString*)class id_role:(NSInteger*)id_role id_school:(NSInteger*)id_school token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) updateUserId:(NSNumber*)id_user lastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password class:(NSString*)class id_role:(NSNumber*)id_role id_school:(NSNumber*)id_school token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
     
     NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_user]]]];
@@ -209,7 +209,7 @@
 }
 
 
-- (void) deleteUserWithId:(NSInteger*)id_user token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) deleteUserWithId:(NSNumber*)id_user token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
     NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_user]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];

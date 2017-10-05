@@ -20,14 +20,14 @@
 @property (nonatomic, strong) NSDictionary* dictError;
 
 
-- (void) addDescription:(NSString*)description id_asso:(NSInteger*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle callback:(void (^)(NSError *error, BOOL success))callback;
+- (void) addDescription:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle callback:(void (^)(NSError *error, BOOL success))callback;
 
 - (void) getEvent:(void (^)(NSError *error, BOOL success))callback;
 
-- (void) getEventById:(NSInteger*)eventId callback:(void (^)(NSError *error, BOOL success))callback;
+- (void) getEventById:(NSNumber*)eventId callback:(void (^)(NSError *error, BOOL success))callback;
 
-- (void) updateEventId:(NSInteger*)id_event description:(NSString*)description id_asso:(NSInteger*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback;
+- (void) updateEventId:(NSNumber*)id_event description:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback;
 
-- (void) deleteEventWithId:(NSInteger*)id_event token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback;
+- (void) deleteEventWithId:(NSNumber*)id_event token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback;
 
 @end

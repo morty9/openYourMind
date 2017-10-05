@@ -13,7 +13,7 @@
 @synthesize id_type = id_type_;
 @synthesize status = status_;
 
-- (instancetype) initWithId:(NSInteger*)id_type status:(NSString*)status {
+- (instancetype) initWithId:(NSNumber*)id_type status:(NSString*)status {
     
     self = [self init];
     

@@ -13,7 +13,7 @@
 @synthesize id_role = id_role_;
 @synthesize name = name_;
 
-- (instancetype) initWithId:(NSInteger*)id_role name:(NSString*)name {
+- (instancetype) initWithId:(NSNumber*)id_role name:(NSString*)name {
     
     self = [super init];
     

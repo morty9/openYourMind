@@ -16,7 +16,7 @@
 @synthesize date = date_;
 @synthesize salle = salle_;
 
-- (instancetype) initWithId:(NSInteger*)id_event description:(NSString*)description date:(NSDate*)date salle:(NSString*)salle id_asso:(NSInteger*)id_asso {
+- (instancetype) initWithId:(NSNumber*)id_event description:(NSString*)description date:(NSDate*)date salle:(NSString*)salle id_asso:(NSNumber*)id_asso {
     
     self = [super init];
     

@@ -31,9 +31,6 @@
     
     [self designPage];
     
-    self.navigationItem.title = [NSString stringWithFormat:@"Associations"];
-    self.navigationItem.hidesBackButton = YES;
-    
     self.assoCollectionView.delegate = self;
     self.assoCollectionView.dataSource = self;
     
@@ -83,6 +80,7 @@
 
 
 - (void) designPage {
+    self.navigationItem.title = [NSString stringWithFormat:@"Associations"];
     self.navigationItem.hidesBackButton = YES;
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(addFavourite)];
