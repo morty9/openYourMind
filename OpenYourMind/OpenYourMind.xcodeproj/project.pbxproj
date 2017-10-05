@@ -39,6 +39,7 @@
 		08DC4EC21F863518000E0D57 /* Favourite.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EC11F863518000E0D57 /* Favourite.m */; };
 		08DC4EC51F863607000E0D57 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EC41F863607000E0D57 /* Event.m */; };
 		08DC4EC81F8637B7000E0D57 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EC71F8637B7000E0D57 /* Session.m */; };
+		08DC4ECE1F864409000E0D57 /* crudAssos.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4ECD1F864409000E0D57 /* crudAssos.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,9 @@
 		08DC4EC41F863607000E0D57 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		08DC4EC61F8637B7000E0D57 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
 		08DC4EC71F8637B7000E0D57 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		08DC4ECA1F863ECC000E0D57 /* APIKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKeys.h; sourceTree = "<group>"; };
+		08DC4ECC1F864409000E0D57 /* crudAssos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudAssos.h; sourceTree = "<group>"; };
+		08DC4ECD1F864409000E0D57 /* crudAssos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudAssos.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 		08DC4E2E1F8522C8000E0D57 /* OpenYourMind */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4EC91F863E60000E0D57 /* APIKey */,
 				08DC4E7C1F85751E000E0D57 /* Models */,
 				08DC4E711F854FAE000E0D57 /* FirstScreen */,
 				08DC4E6A1F85239E000E0D57 /* AssoScreen */,
@@ -379,6 +384,8 @@
 		08DC4EA71F85A41A000E0D57 /* Assos */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4ECC1F864409000E0D57 /* crudAssos.h */,
+				08DC4ECD1F864409000E0D57 /* crudAssos.m */,
 			);
 			path = Assos;
 			sourceTree = "<group>";
@@ -456,6 +463,14 @@
 				08DC4EBB1F86339E000E0D57 /* Inscrits.m */,
 			);
 			path = Inscrits;
+			sourceTree = "<group>";
+		};
+		08DC4EC91F863E60000E0D57 /* APIKey */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4ECA1F863ECC000E0D57 /* APIKeys.h */,
+			);
+			path = APIKey;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -621,6 +636,7 @@
 				08DC4EB11F85A4CC000E0D57 /* crudUsers.m in Sources */,
 				08DC4EA51F85A031000E0D57 /* HomeScreenViewController.m in Sources */,
 				08DC4EC81F8637B7000E0D57 /* Session.m in Sources */,
+				08DC4ECE1F864409000E0D57 /* crudAssos.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,17 +1,17 @@
 //
-//  crudUsers.m
+//  crudAssos.m
 //  OpenYourMind
 //
 //  Created by Bérangère La Touche on 05/10/2017.
 //  Copyright © 2017 Bérangère La Touche. All rights reserved.
 //
 
-#import "crudUsers.h"
-#import "Users.h"
+#import "crudAssos.h"
 #import "SynchronousMethod.h"
+#import "Assos.h"
 #import "APIKeys.h"
 
-@implementation crudUsers {
+@implementation crudAssos {
     SynchronousMethod* synchronousMethod;
 }
 
@@ -21,14 +21,14 @@
     self = [super init];
     
     if (self != nil) {
-        self.userList = [[NSMutableArray<Users*> alloc] init];
-        self.user = [[Users alloc] init];
+        self.assoList = [[NSMutableArray<Assos*> alloc] init];
+        self.asso = [[Assos alloc] init];
     }
     return self;
 }
 
 
-- (void) addLastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password class:(NSString*)class id_school:(NSInteger)id_school id_role:(NSInteger)id_role callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) addName:(NSString*)name id_school:(NSInteger)id_school description:(NSString*)description id_user:(NSInteger)id_user id_type:(NSInteger)id_type callback:(void (^)(NSError *error, BOOL success))callback {
     
     self.dictError = [[NSDictionary alloc] init];
     
@@ -36,13 +36,11 @@
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"POST"];
     
-    NSDictionary<NSString*, NSString*> *jsonData = @{@"name" : lastname,
-                                                     @"firstName" : firstname,
-                                                     @"email" : email,
-                                                     @"password" : password,
-                                                     @"class" : class,
-                                                     @"school" : [NSNumber numberWithInteger:id_school],
-                                                     @"role" : [NSNumber numberWithInteger:id_role]};
+    NSDictionary<NSString*, NSString*> *jsonData = @{@"name" : name,
+                                                     @"id_school" : [NSNumber numberWithInteger:id_school],
+                                                     @"description" : description,
+                                                     @"id_user" : [NSNumber numberWithInteger:id_user],
+                                                     @"id_type" : [NSNumber numberWithInteger:id_type]};
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];
