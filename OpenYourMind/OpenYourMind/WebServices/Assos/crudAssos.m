@@ -21,8 +21,10 @@
     self = [super init];
     
     if (self != nil) {
+        
         self.assoList = [[NSMutableArray<Assos*> alloc] init];
         self.asso = [[Assos alloc] init];
+        synchronousMethod = [[SynchronousMethod alloc] init];
     }
     return self;
 }
@@ -98,12 +100,11 @@
             NSString* tmp_description = [asso valueForKey:@"description"];
             NSNumber* tmp_id_user = [asso valueForKey:@"id_user"];
             NSNumber* tmp_id_type = [asso valueForKey:@"id_type"];
-            
+
             Assos* a = [[Assos alloc] initWithId:tmp_id id_school:tmp_id_school name:tmp_name description:tmp_description id_user:tmp_id_user id_type:tmp_id_type];
             
             [self.assoList addObject:a];
         }
-        
         
         callback(error, true);
     } else {

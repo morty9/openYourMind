@@ -27,17 +27,26 @@
                         <barButtonItem width="30" id="qDq-mc-n3s"/>
                         <barButtonItem image="man-user" width="90" id="ws5-l7-b89">
                             <color key="tintColor" red="0.1019607843" green="0.6705882353" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="profilPage:" destination="-1" id="heG-MG-IRd"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem image="musica-searcher" width="90" id="Hpn-WL-4VN">
                             <color key="tintColor" red="0.1019607843" green="0.6705882353" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="searchProjects:" destination="-1" id="nMP-Bq-aKb"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem image="logo_mini" width="90" id="qnP-2F-rVT">
                             <color key="tintColor" red="0.1019607843" green="0.6705882353" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="reloadData:" destination="-1" id="UPZ-FW-35l"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem width="35" id="pL9-eG-xuj"/>
                     </items>
                 </toolbar>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dXT-0N-lqd">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dXT-0N-lqd">
                     <rect key="frame" x="0.0" y="76" width="414" height="599"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>

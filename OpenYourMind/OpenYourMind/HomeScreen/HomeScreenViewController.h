@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Assos.h"
 
-@interface HomeScreenViewController : UIViewController
+@interface HomeScreenViewController : UIViewController {
+    
+    NSArray<Assos*>* fav_asso_;
+    
+}
+
+@property (nonatomic, strong) NSArray<Assos*>* fav_asso;
+@property (strong, nonatomic) UISearchController *searchController;
+@property (weak, nonatomic) IBOutlet UITableView *favouriteTV;
 
 @end

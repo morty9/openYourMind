@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenViewController">
             <connections>
+                <outlet property="favouriteTV" destination="wRf-8C-BF9" id="1eS-PD-YV7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,9 +43,10 @@
                         <constraint firstAttribute="width" constant="374" id="1u7-z8-QRe"/>
                         <constraint firstAttribute="height" constant="536" id="l04-1K-nt6"/>
                     </constraints>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mes favoris:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v57-vB-O3B">
-                    <rect key="frame" x="20" y="91" width="166" height="50"/>
+                    <rect key="frame" x="20" y="74" width="166" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="8eL-qn-WzB"/>
                         <constraint firstAttribute="width" constant="166" id="ZDO-pe-OBd"/>
@@ -62,7 +64,7 @@
                 <constraint firstAttribute="trailing" secondItem="CJk-9M-1Sl" secondAttribute="trailing" id="MHg-xJ-wTn"/>
                 <constraint firstItem="CJk-9M-1Sl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZjH-ZW-ssj"/>
                 <constraint firstItem="wRf-8C-BF9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h8G-Em-gRB"/>
-                <constraint firstItem="v57-vB-O3B" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="91" id="jp8-KI-P2J"/>
+                <constraint firstItem="v57-vB-O3B" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="jp8-KI-P2J"/>
             </constraints>
         </view>
     </objects>

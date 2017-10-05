@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AssoCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleAsso;
 
 @end
