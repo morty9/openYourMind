@@ -7,6 +7,7 @@
 //
 
 #import "LoginScreenViewController.h"
+#import "AssosiationViewController.h"
 
 @interface LoginScreenViewController ()
 
@@ -24,6 +25,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)goToAssosiationsScreen:(id)sender {
+    AssosiationViewController* associationsVc = [[AssosiationViewController alloc] init];
+    [self.navigationController pushViewController:associationsVc animated:YES];
+}
+
 
 - (void) designPage {
     

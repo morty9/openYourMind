@@ -31,9 +31,6 @@
     
     [self designPage];
     
-    self.navigationItem.title = [NSString stringWithFormat:@"Associations"];
-    self.navigationItem.hidesBackButton = YES;
-    
     self.assoCollectionView.delegate = self;
     self.assoCollectionView.dataSource = self;
     
@@ -41,6 +38,10 @@
     
     [self.assoCollectionView reloadData];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,6 +84,7 @@
 
 
 - (void) designPage {
+    self.navigationItem.title = [NSString stringWithFormat:@"Associations"];
     self.navigationItem.hidesBackButton = YES;
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(addFavourite)];

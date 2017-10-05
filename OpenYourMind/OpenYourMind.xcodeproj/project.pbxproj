@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0886D6211F86610F004F2A95 /* Types.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6201F86610F004F2A95 /* Types.m */; };
+		0886D6261F86656E004F2A95 /* crudEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6251F86656E004F2A95 /* crudEvents.m */; };
+		0886D6291F86657A004F2A95 /* crudSessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6281F86657A004F2A95 /* crudSessions.m */; };
+		0886D62C1F868019004F2A95 /* crudFavourit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D62B1F868019004F2A95 /* crudFavourit.m */; };
+		0886D6311F868071004F2A95 /* crudNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6301F868071004F2A95 /* crudNotes.m */; };
+		0886D6351F868091004F2A95 /* crudInscrit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6341F868091004F2A95 /* crudInscrit.m */; };
 		08DC4E311F8522C8000E0D57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E301F8522C8000E0D57 /* main.m */; };
 		08DC4E341F8522C8000E0D57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E331F8522C8000E0D57 /* AppDelegate.m */; };
 		08DC4E3C1F8522C8000E0D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E3B1F8522C8000E0D57 /* Assets.xcassets */; };
@@ -23,7 +29,6 @@
 		08DC4E871F8581EE000E0D57 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E861F8581EE000E0D57 /* Notes.m */; };
 		08DC4E8A1F85832F000E0D57 /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E891F85832F000E0D57 /* Users.m */; };
 		08DC4E8D1F858610000E0D57 /* Assos.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E8C1F858610000E0D57 /* Assos.m */; };
-		08DC4E911F85888D000E0D57 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E901F85888D000E0D57 /* Type.m */; };
 		08DC4E951F858ACB000E0D57 /* AssosiationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E931F858ACB000E0D57 /* AssosiationViewController.m */; };
 		08DC4E961F858ACB000E0D57 /* AssosiationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E941F858ACB000E0D57 /* AssosiationViewController.xib */; };
 		08DC4E9B1F859230000E0D57 /* AssoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E991F859230000E0D57 /* AssoCollectionViewCell.m */; };
@@ -32,6 +37,14 @@
 		08DC4EA11F859A50000E0D57 /* ProfilScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E9F1F859A50000E0D57 /* ProfilScreenViewController.xib */; };
 		08DC4EA51F85A031000E0D57 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EA31F85A031000E0D57 /* HomeScreenViewController.m */; };
 		08DC4EA61F85A031000E0D57 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4EA41F85A031000E0D57 /* HomeScreenViewController.xib */; };
+		08DC4EB11F85A4CC000E0D57 /* crudUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EB01F85A4CC000E0D57 /* crudUsers.m */; };
+		08DC4EB41F8629D0000E0D57 /* SynchronousMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EB31F8629D0000E0D57 /* SynchronousMethod.m */; };
+		08DC4EBC1F86339E000E0D57 /* Inscrits.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EBB1F86339E000E0D57 /* Inscrits.m */; };
+		08DC4EBF1F86349E000E0D57 /* Role.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EBE1F86349E000E0D57 /* Role.m */; };
+		08DC4EC21F863518000E0D57 /* Favourite.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EC11F863518000E0D57 /* Favourite.m */; };
+		08DC4EC51F863607000E0D57 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EC41F863607000E0D57 /* Event.m */; };
+		08DC4EC81F8637B7000E0D57 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4EC71F8637B7000E0D57 /* Session.m */; };
+		08DC4ECE1F864409000E0D57 /* crudAssos.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4ECD1F864409000E0D57 /* crudAssos.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +65,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0886D61F1F86610F004F2A95 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		0886D6201F86610F004F2A95 /* Types.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Types.m; sourceTree = "<group>"; };
+		0886D6241F86656E004F2A95 /* crudEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudEvents.h; sourceTree = "<group>"; };
+		0886D6251F86656E004F2A95 /* crudEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudEvents.m; sourceTree = "<group>"; };
+		0886D6271F86657A004F2A95 /* crudSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudSessions.h; sourceTree = "<group>"; };
+		0886D6281F86657A004F2A95 /* crudSessions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudSessions.m; sourceTree = "<group>"; };
+		0886D62B1F868019004F2A95 /* crudFavourit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudFavourit.m; sourceTree = "<group>"; };
+		0886D62D1F868041004F2A95 /* crudFavourit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crudFavourit.h; sourceTree = "<group>"; };
+		0886D62F1F868071004F2A95 /* crudNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudNotes.h; sourceTree = "<group>"; };
+		0886D6301F868071004F2A95 /* crudNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudNotes.m; sourceTree = "<group>"; };
+		0886D6331F868091004F2A95 /* crudInscrit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudInscrit.h; sourceTree = "<group>"; };
+		0886D6341F868091004F2A95 /* crudInscrit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudInscrit.m; sourceTree = "<group>"; };
 		08DC4E2C1F8522C8000E0D57 /* OpenYourMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenYourMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DC4E301F8522C8000E0D57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08DC4E321F8522C8000E0D57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,8 +107,6 @@
 		08DC4E891F85832F000E0D57 /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
 		08DC4E8B1F858610000E0D57 /* Assos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assos.h; sourceTree = "<group>"; };
 		08DC4E8C1F858610000E0D57 /* Assos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assos.m; sourceTree = "<group>"; };
-		08DC4E8F1F85888D000E0D57 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
-		08DC4E901F85888D000E0D57 /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
 		08DC4E921F858ACB000E0D57 /* AssosiationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssosiationViewController.h; sourceTree = "<group>"; };
 		08DC4E931F858ACB000E0D57 /* AssosiationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssosiationViewController.m; sourceTree = "<group>"; };
 		08DC4E941F858ACB000E0D57 /* AssosiationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssosiationViewController.xib; sourceTree = "<group>"; };
@@ -96,6 +119,23 @@
 		08DC4EA21F85A031000E0D57 /* HomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
 		08DC4EA31F85A031000E0D57 /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
 		08DC4EA41F85A031000E0D57 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
+		08DC4EAF1F85A4CC000E0D57 /* crudUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudUsers.h; sourceTree = "<group>"; };
+		08DC4EB01F85A4CC000E0D57 /* crudUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudUsers.m; sourceTree = "<group>"; };
+		08DC4EB21F8629D0000E0D57 /* SynchronousMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynchronousMethod.h; sourceTree = "<group>"; };
+		08DC4EB31F8629D0000E0D57 /* SynchronousMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynchronousMethod.m; sourceTree = "<group>"; };
+		08DC4EBA1F86339E000E0D57 /* Inscrits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inscrits.h; sourceTree = "<group>"; };
+		08DC4EBB1F86339E000E0D57 /* Inscrits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inscrits.m; sourceTree = "<group>"; };
+		08DC4EBD1F86349E000E0D57 /* Role.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Role.h; sourceTree = "<group>"; };
+		08DC4EBE1F86349E000E0D57 /* Role.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Role.m; sourceTree = "<group>"; };
+		08DC4EC01F863518000E0D57 /* Favourite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favourite.h; sourceTree = "<group>"; };
+		08DC4EC11F863518000E0D57 /* Favourite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favourite.m; sourceTree = "<group>"; };
+		08DC4EC31F863607000E0D57 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		08DC4EC41F863607000E0D57 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		08DC4EC61F8637B7000E0D57 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		08DC4EC71F8637B7000E0D57 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		08DC4ECA1F863ECC000E0D57 /* APIKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKeys.h; sourceTree = "<group>"; };
+		08DC4ECC1F864409000E0D57 /* crudAssos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudAssos.h; sourceTree = "<group>"; };
+		08DC4ECD1F864409000E0D57 /* crudAssos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudAssos.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +163,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0886D6221F866521004F2A95 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				0886D6271F86657A004F2A95 /* crudSessions.h */,
+				0886D6281F86657A004F2A95 /* crudSessions.m */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
+		0886D6231F86652A004F2A95 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				0886D6241F86656E004F2A95 /* crudEvents.h */,
+				0886D6251F86656E004F2A95 /* crudEvents.m */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		0886D62A1F867FF7004F2A95 /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				0886D62D1F868041004F2A95 /* crudFavourit.h */,
+				0886D62B1F868019004F2A95 /* crudFavourit.m */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
+		0886D6321F86807A004F2A95 /* Inscrits */ = {
+			isa = PBXGroup;
+			children = (
+				0886D6331F868091004F2A95 /* crudInscrit.h */,
+				0886D6341F868091004F2A95 /* crudInscrit.m */,
+			);
+			path = Inscrits;
+			sourceTree = "<group>";
+		};
 		08DC4E231F8522C8000E0D57 = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +222,8 @@
 		08DC4E2E1F8522C8000E0D57 /* OpenYourMind */ = {
 			isa = PBXGroup;
 			children = (
-				08DC4E7C1F85751E000E0D57 /* Data */,
+				08DC4EC91F863E60000E0D57 /* APIKey */,
+				08DC4E7C1F85751E000E0D57 /* Models */,
 				08DC4E711F854FAE000E0D57 /* FirstScreen */,
 				08DC4E6A1F85239E000E0D57 /* AssoScreen */,
 				08DC4E691F85238F000E0D57 /* LabScreen */,
@@ -195,6 +272,17 @@
 		08DC4E621F8522DD000E0D57 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				0886D6321F86807A004F2A95 /* Inscrits */,
+				0886D62A1F867FF7004F2A95 /* Favourite */,
+				0886D6231F86652A004F2A95 /* Events */,
+				0886D6221F866521004F2A95 /* Sessions */,
+				08DC4EAB1F85A43E000E0D57 /* Type */,
+				08DC4EAA1F85A42B000E0D57 /* Schools */,
+				08DC4EA91F85A426000E0D57 /* Notes */,
+				08DC4EA81F85A421000E0D57 /* Users */,
+				08DC4EA71F85A41A000E0D57 /* Assos */,
+				08DC4EB21F8629D0000E0D57 /* SynchronousMethod.h */,
+				08DC4EB31F8629D0000E0D57 /* SynchronousMethod.m */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -275,16 +363,21 @@
 			path = FirstScreen;
 			sourceTree = "<group>";
 		};
-		08DC4E7C1F85751E000E0D57 /* Data */ = {
+		08DC4E7C1F85751E000E0D57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				08DC4EB91F86337D000E0D57 /* Inscrits */,
+				08DC4EB81F863362000E0D57 /* Role */,
+				08DC4EB71F863352000E0D57 /* Favourite */,
+				08DC4EB61F86333D000E0D57 /* Event */,
+				08DC4EB51F863327000E0D57 /* Session */,
 				08DC4E8E1F85868B000E0D57 /* Type */,
 				08DC4E801F857589000E0D57 /* Schools */,
 				08DC4E7F1F857583000E0D57 /* Notes */,
 				08DC4E7E1F857569000E0D57 /* Users */,
 				08DC4E7D1F85755D000E0D57 /* Assos */,
 			);
-			path = Data;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		08DC4E7D1F85755D000E0D57 /* Assos */ = {
@@ -327,8 +420,8 @@
 		08DC4E8E1F85868B000E0D57 /* Type */ = {
 			isa = PBXGroup;
 			children = (
-				08DC4E8F1F85888D000E0D57 /* Type.h */,
-				08DC4E901F85888D000E0D57 /* Type.m */,
+				0886D61F1F86610F004F2A95 /* Types.h */,
+				0886D6201F86610F004F2A95 /* Types.m */,
 			);
 			path = Type;
 			sourceTree = "<group>";
@@ -341,6 +434,100 @@
 				08DC4E9A1F859230000E0D57 /* AssoCollectionViewCell.xib */,
 			);
 			path = AssoCollectionView;
+			sourceTree = "<group>";
+		};
+		08DC4EA71F85A41A000E0D57 /* Assos */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4ECC1F864409000E0D57 /* crudAssos.h */,
+				08DC4ECD1F864409000E0D57 /* crudAssos.m */,
+			);
+			path = Assos;
+			sourceTree = "<group>";
+		};
+		08DC4EA81F85A421000E0D57 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4EAF1F85A4CC000E0D57 /* crudUsers.h */,
+				08DC4EB01F85A4CC000E0D57 /* crudUsers.m */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		08DC4EA91F85A426000E0D57 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				0886D62F1F868071004F2A95 /* crudNotes.h */,
+				0886D6301F868071004F2A95 /* crudNotes.m */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		08DC4EAA1F85A42B000E0D57 /* Schools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Schools;
+			sourceTree = "<group>";
+		};
+		08DC4EAB1F85A43E000E0D57 /* Type */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Type;
+			sourceTree = "<group>";
+		};
+		08DC4EB51F863327000E0D57 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4EC61F8637B7000E0D57 /* Session.h */,
+				08DC4EC71F8637B7000E0D57 /* Session.m */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		08DC4EB61F86333D000E0D57 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4EC31F863607000E0D57 /* Event.h */,
+				08DC4EC41F863607000E0D57 /* Event.m */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		08DC4EB71F863352000E0D57 /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4EC01F863518000E0D57 /* Favourite.h */,
+				08DC4EC11F863518000E0D57 /* Favourite.m */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
+		08DC4EB81F863362000E0D57 /* Role */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4EBD1F86349E000E0D57 /* Role.h */,
+				08DC4EBE1F86349E000E0D57 /* Role.m */,
+			);
+			path = Role;
+			sourceTree = "<group>";
+		};
+		08DC4EB91F86337D000E0D57 /* Inscrits */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4EBA1F86339E000E0D57 /* Inscrits.h */,
+				08DC4EBB1F86339E000E0D57 /* Inscrits.m */,
+			);
+			path = Inscrits;
+			sourceTree = "<group>";
+		};
+		08DC4EC91F863E60000E0D57 /* APIKey */ = {
+			isa = PBXGroup;
+			children = (
+				08DC4ECA1F863ECC000E0D57 /* APIKeys.h */,
+			);
+			path = APIKey;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,18 +674,31 @@
 			files = (
 				08DC4E9B1F859230000E0D57 /* AssoCollectionViewCell.m in Sources */,
 				08DC4E8D1F858610000E0D57 /* Assos.m in Sources */,
+				0886D6261F86656E004F2A95 /* crudEvents.m in Sources */,
+				08DC4EC21F863518000E0D57 /* Favourite.m in Sources */,
 				08DC4E341F8522C8000E0D57 /* AppDelegate.m in Sources */,
 				08DC4E751F854FD3000E0D57 /* FirstScreenViewController.m in Sources */,
+				0886D62C1F868019004F2A95 /* crudFavourit.m in Sources */,
 				08DC4E311F8522C8000E0D57 /* main.m in Sources */,
+				08DC4EBF1F86349E000E0D57 /* Role.m in Sources */,
+				0886D6211F86610F004F2A95 /* Types.m in Sources */,
 				08DC4E841F857684000E0D57 /* Schools.m in Sources */,
-				08DC4E911F85888D000E0D57 /* Type.m in Sources */,
+				0886D6311F868071004F2A95 /* crudNotes.m in Sources */,
 				08DC4E8A1F85832F000E0D57 /* Users.m in Sources */,
 				08DC4E6F1F854A98000E0D57 /* SignUpViewController.m in Sources */,
 				08DC4E871F8581EE000E0D57 /* Notes.m in Sources */,
+				08DC4EC51F863607000E0D57 /* Event.m in Sources */,
+				0886D6291F86657A004F2A95 /* crudSessions.m in Sources */,
+				08DC4EBC1F86339E000E0D57 /* Inscrits.m in Sources */,
+				08DC4EB41F8629D0000E0D57 /* SynchronousMethod.m in Sources */,
+				0886D6351F868091004F2A95 /* crudInscrit.m in Sources */,
 				08DC4E951F858ACB000E0D57 /* AssosiationViewController.m in Sources */,
 				08DC4EA01F859A50000E0D57 /* ProfilScreenViewController.m in Sources */,
 				08DC4E7A1F8552B6000E0D57 /* LoginScreenViewController.m in Sources */,
+				08DC4EB11F85A4CC000E0D57 /* crudUsers.m in Sources */,
 				08DC4EA51F85A031000E0D57 /* HomeScreenViewController.m in Sources */,
+				08DC4EC81F8637B7000E0D57 /* Session.m in Sources */,
+				08DC4ECE1F864409000E0D57 /* crudAssos.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

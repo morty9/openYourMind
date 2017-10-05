@@ -22,7 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    HomeScreenViewController* tvb = [[HomeScreenViewController alloc] init];
+    FirstScreenViewController* tvb = [[FirstScreenViewController alloc] init];
     UIWindow* w = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     w.rootViewController = [[UINavigationController alloc] initWithRootViewController:tvb];
     [w makeKeyAndVisible];
