@@ -16,6 +16,10 @@
 		0886D63E1F86C62D004F2A95 /* LabScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D63C1F86C62D004F2A95 /* LabScreenViewController.m */; };
 		0886D63F1F86C62D004F2A95 /* LabScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0886D63D1F86C62D004F2A95 /* LabScreenViewController.xib */; };
 		0886D6431F86E9CC004F2A95 /* crudAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886D6421F86E9CC004F2A95 /* crudAuth.m */; };
+		089BF4481F8760C500962AE4 /* SessionScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089BF4461F8760C500962AE4 /* SessionScreenViewController.m */; };
+		089BF4491F8760C500962AE4 /* SessionScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089BF4471F8760C500962AE4 /* SessionScreenViewController.xib */; };
+		089BF44E1F8760E600962AE4 /* CallScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089BF44C1F8760E600962AE4 /* CallScreenViewController.m */; };
+		089BF44F1F8760E600962AE4 /* CallScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089BF44D1F8760E600962AE4 /* CallScreenViewController.xib */; };
 		08DC4E311F8522C8000E0D57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E301F8522C8000E0D57 /* main.m */; };
 		08DC4E341F8522C8000E0D57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E331F8522C8000E0D57 /* AppDelegate.m */; };
 		08DC4E3C1F8522C8000E0D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E3B1F8522C8000E0D57 /* Assets.xcassets */; };
@@ -85,6 +89,12 @@
 		0886D63D1F86C62D004F2A95 /* LabScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabScreenViewController.xib; sourceTree = "<group>"; };
 		0886D6411F86E9CC004F2A95 /* crudAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudAuth.h; sourceTree = "<group>"; };
 		0886D6421F86E9CC004F2A95 /* crudAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudAuth.m; sourceTree = "<group>"; };
+		089BF4451F8760C500962AE4 /* SessionScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionScreenViewController.h; sourceTree = "<group>"; };
+		089BF4461F8760C500962AE4 /* SessionScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionScreenViewController.m; sourceTree = "<group>"; };
+		089BF4471F8760C500962AE4 /* SessionScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionScreenViewController.xib; sourceTree = "<group>"; };
+		089BF44B1F8760E600962AE4 /* CallScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallScreenViewController.h; sourceTree = "<group>"; };
+		089BF44C1F8760E600962AE4 /* CallScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallScreenViewController.m; sourceTree = "<group>"; };
+		089BF44D1F8760E600962AE4 /* CallScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallScreenViewController.xib; sourceTree = "<group>"; };
 		08DC4E2C1F8522C8000E0D57 /* OpenYourMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenYourMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DC4E301F8522C8000E0D57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08DC4E321F8522C8000E0D57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -216,6 +226,26 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		089BF4441F875FC400962AE4 /* SessionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				089BF4451F8760C500962AE4 /* SessionScreenViewController.h */,
+				089BF4461F8760C500962AE4 /* SessionScreenViewController.m */,
+				089BF4471F8760C500962AE4 /* SessionScreenViewController.xib */,
+			);
+			path = SessionScreen;
+			sourceTree = "<group>";
+		};
+		089BF44A1F8760CB00962AE4 /* CallScreen */ = {
+			isa = PBXGroup;
+			children = (
+				089BF44B1F8760E600962AE4 /* CallScreenViewController.h */,
+				089BF44C1F8760E600962AE4 /* CallScreenViewController.m */,
+				089BF44D1F8760E600962AE4 /* CallScreenViewController.xib */,
+			);
+			path = CallScreen;
+			sourceTree = "<group>";
+		};
 		08DC4E231F8522C8000E0D57 = {
 			isa = PBXGroup;
 			children = (
@@ -239,10 +269,11 @@
 		08DC4E2E1F8522C8000E0D57 /* OpenYourMind */ = {
 			isa = PBXGroup;
 			children = (
+				089BF44A1F8760CB00962AE4 /* CallScreen */,
+				089BF4441F875FC400962AE4 /* SessionScreen */,
 				08DC4EC91F863E60000E0D57 /* APIKey */,
 				08DC4E7C1F85751E000E0D57 /* Models */,
 				08DC4E711F854FAE000E0D57 /* FirstScreen */,
-				08DC4E6A1F85239E000E0D57 /* AssoScreen */,
 				08DC4E691F85238F000E0D57 /* LabScreen */,
 				08DC4E671F852357000E0D57 /* ProfilScreen */,
 				08DC4E661F85234B000E0D57 /* HomeScreen */,
@@ -365,13 +396,6 @@
 				0886D63D1F86C62D004F2A95 /* LabScreenViewController.xib */,
 			);
 			path = LabScreen;
-			sourceTree = "<group>";
-		};
-		08DC4E6A1F85239E000E0D57 /* AssoScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AssoScreen;
 			sourceTree = "<group>";
 		};
 		08DC4E711F854FAE000E0D57 /* FirstScreen */ = {
@@ -660,6 +684,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089BF44F1F8760E600962AE4 /* CallScreenViewController.xib in Resources */,
 				08DC4EA61F85A031000E0D57 /* HomeScreenViewController.xib in Resources */,
 				08DC4E961F858ACB000E0D57 /* AssosiationViewController.xib in Resources */,
 				0886D63F1F86C62D004F2A95 /* LabScreenViewController.xib in Resources */,
@@ -669,6 +694,7 @@
 				08DC4E701F854A98000E0D57 /* SignUpViewController.xib in Resources */,
 				08DC4E3C1F8522C8000E0D57 /* Assets.xcassets in Resources */,
 				08DC4E9C1F859230000E0D57 /* AssoCollectionViewCell.xib in Resources */,
+				089BF4491F8760C500962AE4 /* SessionScreenViewController.xib in Resources */,
 				08DC4E7B1F8552B6000E0D57 /* LoginScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,7 +724,9 @@
 				08DC4E8D1F858610000E0D57 /* Assos.m in Sources */,
 				0886D6261F86656E004F2A95 /* crudEvents.m in Sources */,
 				08DC4EC21F863518000E0D57 /* Favourite.m in Sources */,
+				089BF44E1F8760E600962AE4 /* CallScreenViewController.m in Sources */,
 				08DC4E341F8522C8000E0D57 /* AppDelegate.m in Sources */,
+				089BF4481F8760C500962AE4 /* SessionScreenViewController.m in Sources */,
 				08DC4E751F854FD3000E0D57 /* FirstScreenViewController.m in Sources */,
 				0886D63E1F86C62D004F2A95 /* LabScreenViewController.m in Sources */,
 				0886D62C1F868019004F2A95 /* crudFavourit.m in Sources */,

@@ -8,6 +8,7 @@
 
 #ifndef APIKeys_h
 #define APIKeys_h
+#import "Users.h"
 
 static NSString* kUser_api = @"http://127.0.0.1:3000/users";
 static NSString* kAuthLogin_api = @"http://127.0.0.1:3000/auth/login";
@@ -23,6 +24,6 @@ static NSString* kSessions_api = @"http://127.0.0.1:3000/sessions";
 static NSString* kFavourite_api = @"http://127.0.0.1:3000/favourites";
 static NSString* kLogin_Api = @"http://127.0.0.1:3000/auth/login";
 
-static NSNumber* userConnected;
+static Users* userConnected;
 
 #endif /* APIKeys_h */

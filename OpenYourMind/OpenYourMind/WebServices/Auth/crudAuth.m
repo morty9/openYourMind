@@ -60,6 +60,25 @@
             _dict_error = jsonDict;
         }
         
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSNumber* tmp_id = [jsonDict valueForKey:@"id"];
+            NSString* tmp_lastname = [jsonDict valueForKey:@"lastname"];
+            NSString* tmp_firstname = [jsonDict valueForKey:@"firstname"];
+            NSString* tmp_email = [jsonDict valueForKey:@"email"];
+            NSString* tmp_password = [jsonDict valueForKey:@"password"];
+            NSString* tmp_class = [jsonDict valueForKey:@"class"];
+            NSNumber* tmp_id_role = [jsonDict valueForKey:@"id_role"];
+            NSNumber* tmp_id_school = [jsonDict valueForKey:@"id_school"];
+            
+            userConnected = [[Users alloc] initWithId:tmp_id lastname:tmp_lastname firstname:tmp_firstname email:tmp_email password:tmp_password classUser:tmp_class id_role:tmp_id_role id_school:tmp_id_school];
+            
+            
+            NSLog(@"User %@", userConnected);
+            
+            callback(error, true);
+            
+        });
+        
         userConnected = [jsonDict valueForKey:@"userId"];
         
         callback(error, true);
