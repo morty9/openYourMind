@@ -7,15 +7,22 @@
 //
 
 #import "SessionScreenViewController.h"
+#import "crudSessions.h"
+#import "Session.h"
 
-@interface SessionScreenViewController ()
+@interface SessionScreenViewController () <UITextFieldDelegate>
 
 @end
 
-@implementation SessionScreenViewController
+@implementation SessionScreenViewController {
+    Session* ses;
+    crudSessions* cr;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    ses = [[Session alloc] init];
+    cr = [[crudSessions alloc] init];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -24,6 +31,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)BtnValider:(id)sender {
+    NSString* nom = self.name.text;
+    NSString* desc = self.Description.text;
+    NSString* salle = self.Salle.text;
+    NSString* date = self.Date.text;
+    NSLog(@"Valeurs: %@ %@ %@ %@", nom, desc, salle, date);
+    
+    [cr addDescription:desc id_asso:@(1) dateSession:nil salle:salle callback:^(NSError *error, BOOL success) {
+        if(success){
+            ses = cr.session;
+        }
+    }];
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [self.view endEditing:YES];
+    return YES;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 /*
 #pragma mark - Navigation
 

@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface SessionScreenViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *name;
+@property (weak, nonatomic) IBOutlet UITextField *Description;
+@property (weak, nonatomic) IBOutlet UITextField *Salle;
+@property (weak, nonatomic) IBOutlet UITextField *Date;
 
 @end
