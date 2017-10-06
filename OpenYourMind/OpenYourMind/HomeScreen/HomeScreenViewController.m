@@ -8,8 +8,11 @@
 
 #import "HomeScreenViewController.h"
 #import "Assos.h"
+#import "LabScreenViewController.h"
 
 @interface HomeScreenViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating> {
+    
+    LabScreenViewController* labScreenVC;
     
     NSArray<Assos*>* searchResults;
 }
@@ -23,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    labScreenVC = [[LabScreenViewController alloc] init];
     
     self.navigationItem.title = [NSString stringWithFormat:@"Mes Associations"];
     self.navigationItem.hidesBackButton = YES;
@@ -89,7 +94,11 @@
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
+    Assos* currentAsso;
+    currentAsso = [self.fav_asso objectAtIndex:indexPath.row];
+    labScreenVC.assos = currentAsso;
+    [self.navigationController pushViewController:labScreenVC animated:YES];
     
 }
 

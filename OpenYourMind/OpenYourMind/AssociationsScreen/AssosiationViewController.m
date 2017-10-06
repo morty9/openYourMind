@@ -50,8 +50,6 @@
     
     [self designPage];
     
-    homeVC = [[HomeScreenViewController alloc] init];
-    
     [cAssos getAssos:^(NSError *error, BOOL success) {
         if (success) {
             getAssos = cAssos.assoList;
@@ -143,6 +141,7 @@
 }
 
 - (void) addFavourite {
+    homeVC = [[HomeScreenViewController alloc] init];
     homeVC.fav_asso = favourites;
     [self.navigationController pushViewController:homeVC animated:YES];
 }

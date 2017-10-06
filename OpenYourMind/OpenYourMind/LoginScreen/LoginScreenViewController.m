@@ -8,17 +8,22 @@
 
 #import "LoginScreenViewController.h"
 #import "AssosiationViewController.h"
+#import "crudAuth.h"
 
 @interface LoginScreenViewController ()
 
 @end
 
-@implementation LoginScreenViewController
+@implementation LoginScreenViewController {
+    
+    crudAuth* Auth;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self designPage];
+    Auth = [[crudAuth alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,8 +32,23 @@
 }
 
 - (IBAction)goToAssosiationsScreen:(id)sender {
-    AssosiationViewController* associationsVc = [[AssosiationViewController alloc] init];
-    [self.navigationController pushViewController:associationsVc animated:YES];
+    
+    [Auth login:email.text password:password.text callback:^(NSError *error, BOOL success) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (success) {
+                if ([Auth.dict_error valueForKey:@"type"] != nil) {
+                    NSLog(@"ERROR CONNECTION");
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        AssosiationViewController* associationsVc = [[AssosiationViewController alloc] init];
+                        [self.navigationController pushViewController:associationsVc animated:YES];
+                    });
+                }
+            }
+            
+        });
+        
+    }];
 }
 
 

@@ -21,5 +21,8 @@ static NSString* kAssos_api = @"http://127.0.0.1:3000/assos";
 static NSString* kEvents_api = @"http://127.0.0.1:3000/events";
 static NSString* kSessions_api = @"http://127.0.0.1:3000/sessions";
 static NSString* kFavourite_api = @"http://127.0.0.1:3000/favourites";
+static NSString* kLogin_Api = @"http://127.0.0.1:3000/auth/login";
+
+static NSNumber* userConnected;
 
 #endif /* APIKeys_h */
