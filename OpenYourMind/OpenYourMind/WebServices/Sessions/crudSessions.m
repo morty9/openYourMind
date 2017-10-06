@@ -16,6 +16,7 @@
 }
 
 @synthesize dictError = dictError_;
+@synthesize sessionList = sessionList_;
 
 - (instancetype) init {
     self = [super init];
@@ -29,7 +30,7 @@
 }
 
 
-- (void) addDescription:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) addName:(NSString*)name description:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle callback:(void (^)(NSError *error, BOOL success))callback {
     
     self.dictError = [[NSDictionary alloc] init];
     
@@ -37,10 +38,13 @@
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"POST"];
     
-    NSDictionary<NSString*, NSString*> *jsonData = @{@"description" : description,
+    NSDictionary<NSString*, NSString*> *jsonData = @{@"name" : name,
+                                                     @"description" : description,
                                                      @"id_asso" : id_asso,
-                                                     @"dateSession" : dateSession,
+                                                     @"dateSession" : dateSession ? dateSession : [NSNull null],
                                                      @"salle" : salle};
+    
+    NSLog(@"%@", jsonData);
     
     NSData *postData = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
     [request setHTTPBody:postData];
@@ -93,16 +97,16 @@
         
         for (NSDictionary* session in jsonDict) {
             NSNumber* tmp_id = [session valueForKey:@"id"];
+            NSString* tmp_name = [session valueForKey:@"name"];
             NSString* tmp_description = [session valueForKey:@"description"];
             NSNumber* tmp_id_asso = [session valueForKey:@"id_asso"];
             NSDate* tmp_date = [session valueForKey:@"date"];
             NSString* tmp_salle = [session valueForKey:@"salle"];
             
-            Session* s = [[Session alloc] initWithId:tmp_id description:tmp_description date:tmp_date salle:tmp_salle id_asso:tmp_id_asso];
+            Session* s = [[Session alloc] initWithId:tmp_id name:tmp_name description:tmp_description date:tmp_date salle:tmp_salle id_asso:tmp_id_asso];
             
             [self.sessionList addObject:s];
         }
-        
         
         callback(error, true);
     } else {
@@ -140,12 +144,13 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             NSNumber* tmp_id = [jsonDict valueForKey:@"id"];
+            NSString* tmp_name = [jsonDict valueForKey:@"name"];
             NSString* tmp_description = [jsonDict valueForKey:@"description"];
             NSNumber* tmp_id_asso = [jsonDict valueForKey:@"id_asso"];
             NSDate* tmp_date = [jsonDict valueForKey:@"date"];
             NSString* tmp_salle = [jsonDict valueForKey:@"salle"];
             
-            self.session = [[Session alloc] initWithId:tmp_id description:tmp_description date:tmp_date salle:tmp_salle id_asso:tmp_id_asso];
+            self.session = [[Session alloc] initWithId:tmp_id name:tmp_name description:tmp_description date:tmp_date salle:tmp_salle id_asso:tmp_id_asso];
             
             callback(error, true);
             
@@ -156,7 +161,7 @@
 }
 
 
-- (void) updateSessionId:(NSNumber*)id_session description:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
+- (void) updateSessionId:(NSNumber*)id_session name:(NSString*)name description:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
     
     NSURL *url = [NSURL URLWithString:[kSessions_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_session]]]];
@@ -164,7 +169,8 @@
     [request setHTTPMethod:@"PUT"];
     [request setValue:token forHTTPHeaderField:@"Authorization"];
     
-    NSDictionary<NSString*, NSString*> *jsonData = @{@"description" : description,
+    NSDictionary<NSString*, NSString*> *jsonData = @{@"name" : name,
+                                                     @"description" : description,
                                                      @"id_asso" : id_asso,
                                                      @"dateSession" : dateSession,
                                                      @"salle" : salle};

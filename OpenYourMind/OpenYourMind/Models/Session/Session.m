@@ -11,17 +11,19 @@
 @implementation Session
 
 @synthesize id_session = id_session_;
+@synthesize name = name_;
 @synthesize description = description_;
 @synthesize id_asso = id_asso_;
 @synthesize date = date_;
 @synthesize salle = salle_;
 
-- (instancetype) initWithId:(NSNumber*)id_session description:(NSString*)description date:(NSDate*)date salle:(NSString*)salle id_asso:(NSNumber*)id_asso {
+- (instancetype) initWithId:(NSNumber*)id_session name:(NSString*)name description:(NSString*)description date:(NSDate*)date salle:(NSString*)salle id_asso:(NSNumber*)id_asso {
     
     self = [super init];
     
     if (self != nil) {
         self.id_session = id_session;
+        self.name = name;
         self.description = description;
         self.id_asso = id_asso;
         self.date = date;

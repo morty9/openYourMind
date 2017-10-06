@@ -21,6 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.title = [NSString stringWithFormat:@"Créer une session"];
+    
     ses = [[Session alloc] init];
     cr = [[crudSessions alloc] init];
     // Do any additional setup after loading the view from its nib.
@@ -31,6 +34,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = NO;
+}
+
 - (IBAction)BtnValider:(id)sender {
     NSString* nom = self.name.text;
     NSString* desc = self.Description.text;
@@ -38,7 +45,7 @@
     NSString* date = self.Date.text;
     NSLog(@"Valeurs: %@ %@ %@ %@", nom, desc, salle, date);
     
-    [cr addDescription:desc id_asso:@(1) dateSession:nil salle:salle callback:^(NSError *error, BOOL success) {
+    [cr addName:nom description:desc id_asso:@(4) dateSession:nil salle:salle callback:^(NSError *error, BOOL success) {
         if(success){
             ses = cr.session;
         }

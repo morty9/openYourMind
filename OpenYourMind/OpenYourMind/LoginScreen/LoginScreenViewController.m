@@ -11,6 +11,8 @@
 #import "CallScreenViewController.h"
 #import "crudAuth.h"
 #import "APIKeys.h"
+#import "SessionScreenViewController.h"
+#import "SessionListViewController.h"
 
 @interface LoginScreenViewController ()
 
@@ -46,8 +48,8 @@
                   NSLog(@"%@", currentUser.id_user);
                   
                   if ([currentUser.id_user  isEqual: @(4)]) {
-                    CallScreenViewController* callScreenVC = [[CallScreenViewController alloc] init];
-                    [self.navigationController pushViewController:callScreenVC animated:YES];
+                    SessionListViewController* sessionListScreenVC = [[SessionListViewController alloc] init];
+                    [self.navigationController pushViewController:sessionListScreenVC animated:YES];
                 } else {
                     AssosiationViewController* associationsVc = [[AssosiationViewController alloc] init];
                     [self.navigationController pushViewController:associationsVc animated:YES];

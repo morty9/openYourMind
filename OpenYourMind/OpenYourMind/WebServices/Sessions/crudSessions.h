@@ -20,13 +20,13 @@
 @property (nonatomic, strong) NSDictionary* dictError;
 
 
-- (void) addDescription:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle callback:(void (^)(NSError *error, BOOL success))callback;
+- (void) addName:(NSString*)name description:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle callback:(void (^)(NSError *error, BOOL success))callback;
 
 - (void) getSessions:(void (^)(NSError *error, BOOL success))callback;
 
 - (void) getSessionById:(NSNumber*)sessionId callback:(void (^)(NSError *error, BOOL success))callback;
 
-- (void) updateSessionId:(NSNumber*)id_session description:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback;
+- (void) updateSessionId:(NSNumber*)id_session name:(NSString*)name description:(NSString*)description id_asso:(NSNumber*)id_asso dateSession:(NSDate*)dateSession salle:(NSString*)salle token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback;
 
 - (void) deleteSessionWithId:(NSNumber*)id_session token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback;
 

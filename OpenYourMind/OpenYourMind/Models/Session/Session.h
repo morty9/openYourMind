@@ -11,6 +11,7 @@
 @interface Session : NSObject {
     
     NSNumber* id_session_;
+    NSString* name_;
     NSString* description_;
     NSDate* date_;
     NSString* salle_;
@@ -18,11 +19,12 @@
 }
 
 @property (nonatomic, strong) NSNumber* id_session;
+@property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSString* description;
 @property (nonatomic, strong) NSDate* date;
 @property (nonatomic, strong) NSNumber* id_asso;
 @property (nonatomic, strong) NSString* salle;
 
-- (instancetype) initWithId:(NSNumber*)id_session description:(NSString*)description date:(NSDate*)date salle:(NSString*)salle id_asso:(NSNumber*)id_asso;
+- (instancetype) initWithId:(NSNumber*)id_session name:(NSString*)name description:(NSString*)description date:(NSDate*)date salle:(NSString*)salle id_asso:(NSNumber*)id_asso;
 
 @end

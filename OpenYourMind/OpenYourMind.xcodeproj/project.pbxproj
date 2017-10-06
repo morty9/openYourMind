@@ -21,6 +21,8 @@
 		089BF44E1F8760E600962AE4 /* CallScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089BF44C1F8760E600962AE4 /* CallScreenViewController.m */; };
 		089BF44F1F8760E600962AE4 /* CallScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089BF44D1F8760E600962AE4 /* CallScreenViewController.xib */; };
 		089BF4511F876BC000962AE4 /* APIKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 089BF4501F876BC000962AE4 /* APIKeys.m */; };
+		089BF4551F878F8D00962AE4 /* SessionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089BF4531F878F8D00962AE4 /* SessionListViewController.m */; };
+		089BF4561F878F8D00962AE4 /* SessionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089BF4541F878F8D00962AE4 /* SessionListViewController.xib */; };
 		08DC4E311F8522C8000E0D57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E301F8522C8000E0D57 /* main.m */; };
 		08DC4E341F8522C8000E0D57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DC4E331F8522C8000E0D57 /* AppDelegate.m */; };
 		08DC4E3C1F8522C8000E0D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DC4E3B1F8522C8000E0D57 /* Assets.xcassets */; };
@@ -97,6 +99,9 @@
 		089BF44C1F8760E600962AE4 /* CallScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallScreenViewController.m; sourceTree = "<group>"; };
 		089BF44D1F8760E600962AE4 /* CallScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallScreenViewController.xib; sourceTree = "<group>"; };
 		089BF4501F876BC000962AE4 /* APIKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIKeys.m; sourceTree = "<group>"; };
+		089BF4521F878F8D00962AE4 /* SessionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionListViewController.h; sourceTree = "<group>"; };
+		089BF4531F878F8D00962AE4 /* SessionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionListViewController.m; sourceTree = "<group>"; };
+		089BF4541F878F8D00962AE4 /* SessionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionListViewController.xib; sourceTree = "<group>"; };
 		08DC4E2C1F8522C8000E0D57 /* OpenYourMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenYourMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DC4E301F8522C8000E0D57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08DC4E321F8522C8000E0D57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -234,6 +239,9 @@
 				089BF4451F8760C500962AE4 /* SessionScreenViewController.h */,
 				089BF4461F8760C500962AE4 /* SessionScreenViewController.m */,
 				089BF4471F8760C500962AE4 /* SessionScreenViewController.xib */,
+				089BF4521F878F8D00962AE4 /* SessionListViewController.h */,
+				089BF4531F878F8D00962AE4 /* SessionListViewController.m */,
+				089BF4541F878F8D00962AE4 /* SessionListViewController.xib */,
 			);
 			path = SessionScreen;
 			sourceTree = "<group>";
@@ -688,6 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089BF44F1F8760E600962AE4 /* CallScreenViewController.xib in Resources */,
+				089BF4561F878F8D00962AE4 /* SessionListViewController.xib in Resources */,
 				08DC4EA61F85A031000E0D57 /* HomeScreenViewController.xib in Resources */,
 				08DC4E961F858ACB000E0D57 /* AssosiationViewController.xib in Resources */,
 				0886D63F1F86C62D004F2A95 /* LabScreenViewController.xib in Resources */,
@@ -738,6 +747,7 @@
 				0886D6211F86610F004F2A95 /* Types.m in Sources */,
 				08DC4E841F857684000E0D57 /* Schools.m in Sources */,
 				0886D6311F868071004F2A95 /* crudNotes.m in Sources */,
+				089BF4551F878F8D00962AE4 /* SessionListViewController.m in Sources */,
 				08DC4E8A1F85832F000E0D57 /* Users.m in Sources */,
 				08DC4E6F1F854A98000E0D57 /* SignUpViewController.m in Sources */,
 				08DC4E871F8581EE000E0D57 /* Notes.m in Sources */,
