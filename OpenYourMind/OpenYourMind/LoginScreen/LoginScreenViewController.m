@@ -40,13 +40,8 @@
 - (IBAction)goToAssosiationsScreen:(id)sender {
     
     [Auth login:email.text password:password.text callback:^(NSError *error, BOOL success) {
-        dispatch_async(dispatch_get_main_queue(), ^{
             if (success) {
-              dispatch_async(dispatch_get_main_queue(), ^{
-                
                 currentUser = [APIKeys getUser];
-                  NSLog(@"%@", currentUser.id_user);
-                  
                   if ([currentUser.id_user  isEqual: @(4)]) {
                     SessionListViewController* sessionListScreenVC = [[SessionListViewController alloc] init];
                     [self.navigationController pushViewController:sessionListScreenVC animated:YES];
@@ -54,11 +49,7 @@
                     AssosiationViewController* associationsVc = [[AssosiationViewController alloc] init];
                     [self.navigationController pushViewController:associationsVc animated:YES];
                 }
-              });
             }
-            
-        });
-        
     }];
 }
 

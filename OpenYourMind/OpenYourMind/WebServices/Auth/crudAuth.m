@@ -79,9 +79,9 @@
             
             callback(error, true);
             
+            
         });
         
-        callback(error, true);
         
     }] resume];
 }
