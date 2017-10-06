@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CallScreenViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *inscritsTB;
 
 @end

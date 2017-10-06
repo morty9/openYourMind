@@ -6,8 +6,7 @@
 //  Copyright © 2017 Bérangère La Touche. All rights reserved.
 //
 
-#ifndef APIKeys_h
-#define APIKeys_h
+#import <UIKit/UIKit.h>
 #import "Users.h"
 
 static NSString* kUser_api = @"http://127.0.0.1:3000/users";
@@ -24,6 +23,10 @@ static NSString* kSessions_api = @"http://127.0.0.1:3000/sessions";
 static NSString* kFavourite_api = @"http://127.0.0.1:3000/favourites";
 static NSString* kLogin_Api = @"http://127.0.0.1:3000/auth/login";
 
-static Users* userConnected;
+@interface APIKeys : NSObject
 
-#endif /* APIKeys_h */
++ (Users*) getUser;
+
++ (void) setUserNameWithObjectUser:(Users*) newUser;
+
+@end

@@ -118,55 +118,42 @@
     
 }
 
-
 - (void) getUserById:(NSNumber*)userId callback:(void (^)(NSError *error, BOOL success))callback {
     
-    NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)userId]]]];
+    NSURL *url = [NSURL URLWithString:[kUser_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%@", userId]]]];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"GET"];
     
-    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
+    NSError *error;
+    NSURLResponse *response;
+    NSData *data = [synchronousMethod sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    if (data) {
         NSString* jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSData* jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
         
-        if (error != nil) {
-            NSLog(@"Error: %@", error.localizedDescription);
-            return;
-        }
+        NSNumber* tmp_id = [jsonDict valueForKey:@"id"];
+        NSString* tmp_lastname = [jsonDict valueForKey:@"lastname"];
+        NSString* tmp_firstname = [jsonDict valueForKey:@"firstname"];
+        NSString* tmp_email = [jsonDict valueForKey:@"email"];
+        NSString* tmp_password = [jsonDict valueForKey:@"password"];
+        NSString* tmp_class = [jsonDict valueForKey:@"class"];
+        NSNumber* tmp_id_role = [jsonDict valueForKey:@"id_role"];
+        NSNumber* tmp_id_school = [jsonDict valueForKey:@"id_school"];
         
-        if (data == nil) {
-            return;
-        }
+        self.user = [[Users alloc] initWithId:tmp_id lastname:tmp_lastname firstname:tmp_firstname email:tmp_email password:tmp_password classUser:tmp_class id_role:tmp_id_role id_school:tmp_id_school];
         
-        if (response == nil) {
-            return;
-        }
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSNumber* tmp_id = [jsonDict valueForKey:@"id"];
-            NSString* tmp_lastname = [jsonDict valueForKey:@"lastname"];
-            NSString* tmp_firstname = [jsonDict valueForKey:@"firstname"];
-            NSString* tmp_email = [jsonDict valueForKey:@"email"];
-            NSString* tmp_password = [jsonDict valueForKey:@"password"];
-            NSString* tmp_class = [jsonDict valueForKey:@"class"];
-            NSNumber* tmp_id_role = [jsonDict valueForKey:@"id_role"];
-            NSNumber* tmp_id_school = [jsonDict valueForKey:@"id_school"];
-            
-            self.user = [[Users alloc] initWithId:tmp_id lastname:tmp_lastname firstname:tmp_firstname email:tmp_email password:tmp_password classUser:tmp_class id_role:tmp_id_role id_school:tmp_id_school];
-            
-            
-            NSLog(@"User %@", self.user);
-            
-            callback(error, true);
-            
-        });
+        NSLog(@"User %@", self.user);
         
-    }]resume];
+        callback(error, true);
+    } else {
+        NSLog(@"Error: %@", error.localizedDescription);
+        return;
+    }
     
 }
-
 
 - (void) updateUserId:(NSNumber*)id_user lastname:(NSString*)lastname firstname:(NSString*)firstname email:(NSString*)email password:(NSString*)password class:(NSString*)class id_role:(NSNumber*)id_role id_school:(NSNumber*)id_school token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     

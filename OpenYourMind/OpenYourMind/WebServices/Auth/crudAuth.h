@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Users.h"
 
 @interface crudAuth : NSObject {
     
-    NSNumber* id_user_;
+    Users* user_;
     NSDictionary* _dict_error;
     
 }
 
-@property (nonatomic, strong) NSNumber* id_user;
+@property (nonatomic, strong) Users* user;
 @property (nonatomic, strong) NSDictionary* dict_error;
 
 - (void) login:(NSString*)email password:(NSString*)password callback:(void (^)(NSError *error, BOOL success))callback;

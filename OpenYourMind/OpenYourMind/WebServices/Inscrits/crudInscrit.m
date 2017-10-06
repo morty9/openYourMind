@@ -164,7 +164,7 @@
 - (void) updateInscritId:(NSNumber*)id_inscrit id_user:(NSNumber*)id_user id_session:(NSNumber*)id_session status:(BOOL)status token:(NSString*)token callback:(void (^)(NSError *error, BOOL success))callback {
     
     
-    NSURL *url = [NSURL URLWithString:[kInscrits_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)id_inscrit]]]];
+    NSURL *url = [NSURL URLWithString:[kInscrits_api stringByAppendingString:[@"/" stringByAppendingString:[NSString stringWithFormat:@"%@", id_inscrit]]]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"PUT"];
     [request setValue:token forHTTPHeaderField:@"Authorization"];

@@ -12,6 +12,7 @@
 #import "Assos.h"
 #import "ProfilScreenViewController.h"
 #import "HomeScreenViewController.h"
+#import "APIKeys.h"
 
 @interface AssosiationViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UISearchDisplayDelegate, UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
 

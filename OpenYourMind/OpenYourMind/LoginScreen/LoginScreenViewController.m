@@ -8,7 +8,9 @@
 
 #import "LoginScreenViewController.h"
 #import "AssosiationViewController.h"
+#import "CallScreenViewController.h"
 #import "crudAuth.h"
+#import "APIKeys.h"
 
 @interface LoginScreenViewController ()
 
@@ -17,6 +19,7 @@
 @implementation LoginScreenViewController {
     
     crudAuth* Auth;
+    Users* currentUser;
 }
 
 - (void)viewDidLoad {
@@ -24,6 +27,7 @@
     // Do any additional setup after loading the view from its nib.
     [self designPage];
     Auth = [[crudAuth alloc] init];
+    currentUser = [[Users alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,14 +40,19 @@
     [Auth login:email.text password:password.text callback:^(NSError *error, BOOL success) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (success) {
-                if ([Auth.dict_error valueForKey:@"type"] != nil) {
-                    NSLog(@"ERROR CONNECTION");
+              dispatch_async(dispatch_get_main_queue(), ^{
+                
+                currentUser = [APIKeys getUser];
+                  NSLog(@"%@", currentUser.id_user);
+                  
+                  if ([currentUser.id_user  isEqual: @(4)]) {
+                    CallScreenViewController* callScreenVC = [[CallScreenViewController alloc] init];
+                    [self.navigationController pushViewController:callScreenVC animated:YES];
                 } else {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        AssosiationViewController* associationsVc = [[AssosiationViewController alloc] init];
-                        [self.navigationController pushViewController:associationsVc animated:YES];
-                    });
+                    AssosiationViewController* associationsVc = [[AssosiationViewController alloc] init];
+                    [self.navigationController pushViewController:associationsVc animated:YES];
                 }
+              });
             }
             
         });

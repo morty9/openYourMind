@@ -9,10 +9,12 @@
 #import "LabScreenViewController.h"
 #import "crudInscrit.h"
 #import "APIKeys.h"
+#import "Users.h"
 
 @interface LabScreenViewController () {
     
     crudInscrit* cInscrit;
+    Users* currentUser;
     
 }
 
@@ -25,6 +27,7 @@
     
     if (self != nil) {
         cInscrit = [[crudInscrit alloc] init];
+        currentUser = [[Users alloc] init];
     }
     
     return self;
@@ -47,7 +50,7 @@
 
 - (void) addMember {
     
-    [cInscrit addId_user:userConnected id_session:[NSNumber numberWithInt:1] status:nil callback:^(NSError *error, BOOL success) {
+    [cInscrit addId_user:currentUser.id_user id_session:[NSNumber numberWithInt:1] status:nil callback:^(NSError *error, BOOL success) {
         if (success) {
             NSLog(@"INSCRIT");
         }
@@ -57,6 +60,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    currentUser = [APIKeys getUser];
+    
     self.navigationItem.title = [NSString stringWithFormat:@"%@", self.assos.name];
     self.descriptionLabel.layer.cornerRadius = 15;
     self.descriptionLabel.text = self.assos.description;
